@@ -1,0 +1,622 @@
+#include "ui/menudef.h"
+#include "ui_mp/common_macro.inc"
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+
+// ---------------------------/BUTTONS Definitions\---------------------------
+// ---**Real button Left sied**---
+#define ROZO_AAP_BUTTON_EXT( itemIndex, costArg, actionArg, visArg ) \
+    CHOICE_BUTTON_BG( itemIndex, 1 ) \
+    CHOICE_HIGHLIGHT( itemIndex, 1 ) \
+    itemDef \
+    { \
+        type            ITEM_TYPE_BUTTON \
+        rect            CHOICE_RECT( itemIndex ) \
+        exp             text( costArg ); \
+        textfont        CHOICE_TEXTFONT \
+        textscale       CHOICE_TEXTSIZE \
+        textstyle       CHOICE_TEXTSTYLE \
+        textAlign       ITEM_ALIGN_MIDDLE_RIGHT \
+        textAlignX      CHOICE_TEXT_OFFSET_X \
+        forecolor       CHOICE_TEXTCOLOR \
+        visible         when( visArg ) \
+        CHOICE_SCRIPTS_ALL( itemIndex, actionArg, ;, ; ) \
+    } \
+
+
+// ---**Fake button Left sied**---
+#define ROZO_AAP_BUTTON_FAKE( itemIndex, costArg, visArg ) \
+    itemDef \
+    { \
+        type            ITEM_TYPE_TEXT \
+        rect            CHOICE_RECT( itemIndex ) \
+        exp             text( costArg ); \
+        textfont        CHOICE_TEXTFONT \
+        textscale       CHOICE_TEXTSIZE \
+        textstyle       CHOICE_TEXTSTYLE \
+        textAlign       ITEM_ALIGN_MIDDLE_RIGHT \
+        textAlignX      CHOICE_TEXT_OFFSET_X \
+        forecolor       0.5 0.5 0.5 0.5 \
+        visible         when( visArg ) \
+    } \
+
+
+#define CHOICE_X_START_RIGHT 350
+
+#define CHOICE_X_RIGHT( itemIndex )         (CHOICE_X_START_RIGHT + CHOICE_X_SPACING * CHOICE_COL( itemIndex ))
+#define CHOICE_ORIGIN_RIGHT( itemIndex )  CHOICE_X_RIGHT( itemIndex ) CHOICE_Y( itemIndex )
+#define CHOICE_RECT_RIGHT( itemIndex )    CHOICE_ORIGIN_RIGHT( itemIndex ) CHOICE_SIZE_X CHOICE_SIZE_Y CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN
+
+// ---------------------------/CHOICE BUTTON Background Definitions\---------------------------
+#define CHOICE_BUTTON_BG_RIGHT( itemIndex, visArg ) CHOICE_BUTTON_BG_RAW_RIGHT( itemIndex, "gradient_fadein", BUTTON_BG_COLOR, visArg )
+
+#define CHOICE_BUTTON_BG_RAW_RIGHT( itemIndex, bgimage, foreColorArg, visArg ) \
+        itemDef \
+        { \
+            style           WINDOW_STYLE_SHADER \
+            rect            CHOICE_ORIGIN_RIGHT( itemIndex-10 ) (CHOICE_SIZE_X-(CHOICE_SIZE_Y/4)) CHOICE_SIZE_Y CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN \
+            exp             material( bgimage ); \
+            forecolor       foreColorArg \
+            visible         visArg; \
+            decoration \
+        } \
+        itemDef \
+        { \
+            style           WINDOW_STYLE_SHADER \
+            rect            (CHOICE_X_RIGHT( itemIndex-10 )+(CHOICE_SIZE_X-(CHOICE_SIZE_Y/4))) CHOICE_Y( itemIndex-10 ) (CHOICE_SIZE_Y/4) CHOICE_SIZE_Y CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN \
+            background      HIGHLIGHT_SHADER_ART \
+            forecolor       foreColorArg \
+            visible         visArg; \
+            decoration \
+        } \ 
+
+// ---------------------------/CHOICE BUTTON Hightlight Definitions\---------------------------
+#define CHOICE_HIGHLIGHT_RIGHT( itemIndex, vis ) \
+    CHOICE_HIGHLIGHT_CUSTOM_RIGHT( itemIndex, HIGHLIGHT_COLOR, HIGHLIGHT_BORDER_COLOR, vis )
+
+#define CHOICE_HIGHLIGHT_CUSTOM_RIGHT( itemIndex, foreColorArg, borderColorArg, visArg ) \
+        itemDef \
+        { \
+            style           WINDOW_STYLE_SHADER \
+            rect            CHOICE_ORIGIN_RIGHT( itemIndex-10 ) (CHOICE_SIZE_X-(CHOICE_SIZE_Y/4)) CHOICE_SIZE_Y CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN \
+            background      HIGHLIGHT_SHADER \
+            forecolor       foreColorArg \
+            border          HIGHLIGHT_BORDER \
+            bordersize      2 \
+            bordercolor     borderColorArg \
+            visible         when( localVarInt( ui_highlight ) == itemIndex && localVarString( ui_choicegroup ) == CHOICE_GROUP ); \
+            decoration \
+        } \
+        itemDef \
+        { \
+            style           WINDOW_STYLE_SHADER \
+            rect            (CHOICE_X_RIGHT( itemIndex-10 )+(CHOICE_SIZE_X-(CHOICE_SIZE_Y/4))) CHOICE_Y( itemIndex-10 ) (CHOICE_SIZE_Y/4) CHOICE_SIZE_Y CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN \
+            background      HIGHLIGHT_SHADER_ART \
+            forecolor       foreColorArg \
+            visible         when( localVarInt( ui_highlight ) == itemIndex && localVarString( ui_choicegroup ) == CHOICE_GROUP ); \
+            decoration \
+        } \ 
+        CHOICE_ACCEPT_HINT( itemIndex, visArg )
+
+// ---**Real button Right sied**---
+#define ROZO_AAP_BUTTON_EXT_RIGHT( itemIndex, costArg, actionArg, visArg ) \
+    CHOICE_BUTTON_BG_RIGHT( itemIndex, 1 ) \
+    CHOICE_HIGHLIGHT_RIGHT( itemIndex, 1 ) \
+    itemDef \
+    { \
+        type            ITEM_TYPE_BUTTON \
+        rect            CHOICE_RECT_RIGHT( itemIndex-10 ) \
+        exp             text( costArg ); \
+        textfont        CHOICE_TEXTFONT \
+        textscale       CHOICE_TEXTSIZE \
+        textstyle       CHOICE_TEXTSTYLE \
+        textAlign       ITEM_ALIGN_MIDDLE_RIGHT \
+        textAlignX      CHOICE_TEXT_OFFSET_X \
+        forecolor       CHOICE_TEXTCOLOR \
+        visible         when( visArg ) \
+        CHOICE_SCRIPTS_ALL( itemIndex, actionArg, ;, ; ) \
+    } \
+
+
+// ---**Fake button Right sied**---
+#define ROZO_AAP_BUTTON_FAKE_RIGHT( itemIndex, costArg, visArg ) \
+    itemDef \
+    { \
+        type            ITEM_TYPE_TEXT \
+        rect            CHOICE_RECT_RIGHT( itemIndex ) \
+        exp             text( costArg ); \
+        textfont        CHOICE_TEXTFONT \
+        textscale       CHOICE_TEXTSIZE \
+        textstyle       CHOICE_TEXTSTYLE \
+        textAlign       ITEM_ALIGN_MIDDLE_RIGHT \
+        textAlignX      CHOICE_TEXT_OFFSET_X \
+        forecolor       0.5 0.5 0.5 0.5 \
+        visible         when( visArg ) \
+    } \
+
+#define AAP_ACTION( actionArg ) \
+    play "mouse_click"; \
+    actionArg
+
+{
+    menuDef
+    {
+        name                      "admin_settings"
+        rect                      0 0 640 480 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_SUBTOP
+        borderSize                1
+        foreColor                 1 1 1 1
+        backColor                 0 0 0 0
+        borderColor               0 0 0 0
+        outlineColor              0 0 0 0
+        blurWorld                 7
+        onOpen                    {  }
+        onESC                     { close admin_settings ;  }
+        focusColor                1 1 1 1
+        disableColor              0 0 0 0
+        legacysplitscreenscale    
+        visible 0 
+
+        itemDef
+        {
+            rect                      0 0 640 480 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_FULLSCREEN
+            style                     WINDOW_STYLE_FILLED
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0.75
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+        itemDef
+        {
+            rect                      0 0 854 75 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_SUBTOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "gradient_top"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+        itemDef
+        {
+            rect                      0 405 854 75 HORIZONTAL_ALIGN_FULLSCREEN VERTICAL_ALIGN_SUBTOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "gradient_bottom"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+    // ** Title shader **
+        itemDef
+        {
+            rect                      -120 -32 378 64 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_SUBTOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 0.9 0.9 0.95 0.175
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "white"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+        itemDef
+        {
+            rect                      258 -32 16 -64 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_SUBTOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 0.9 0.9 0.95 0.175
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "button_highlight_end"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+
+    // **Menu Main title**
+        itemDef
+        {
+            rect                      48 0 0 0 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_SUBTOP
+            borderSize                1
+            foreColor                 1 0.8 0.4 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textFont                  UI_FONT_NORMAL
+            textAlign                 ITEM_ALIGN_TOP_LEFT
+            textScale                 0.5833
+            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            text                      "@MENU_AAP"
+            visible                   when ( ( dvarint( "ui_isAdmin" ) >= 1 ) )
+            decoration                
+        }
+        itemDef
+        {
+            rect                      48 0 0 0 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_SUBTOP
+            borderSize                1
+            foreColor                 1 0.8 0.4 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textFont                  UI_FONT_NORMAL
+            textAlign                 ITEM_ALIGN_TOP_LEFT
+            textScale                 0.5833
+            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            text                      "@MENU_AMP"
+            visible                   when ( ( dvarint( "ui_isVIP" ) >= 1 ) )
+            decoration                
+        }
+
+    // **Menu part title**
+        itemDef
+        {
+            rect                      0 85 240 0.5 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 0.85
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "line_horizontal"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+        itemDef
+        {
+            rect                      20 86 200 10 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 0.4 0.6 1 0.8
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "line_horizontal"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+        itemDef
+        {
+            rect                      0 97 240 0.5 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 0.85
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "line_horizontal"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+        itemDef
+        {
+            rect                      0 77 240 24 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            borderSize                1
+            foreColor                 1 1 1 0.8
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textFont                  UI_FONT_NORMAL
+            textAlign                 ITEM_ALIGN_MIDDLE_CENTER
+            textScale                 0.4583
+            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            exp                       text ( ( "@MENU_PLAYER_SETTINGS" ) );
+            visible 1                 
+            decoration                
+        }
+
+    // **Menu part title**
+        itemDef
+        {
+            rect                      -320 87 240 0.5 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 0.85
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "line_horizontal"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+        itemDef
+        {
+            rect                      -300 88 200 10 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 0.4 0.6 1 0.8
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "line_horizontal"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+        itemDef
+        {
+            rect                      -320 99 240 0.5 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 0.85
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "line_horizontal"
+            textScale                 0.55
+            visible 1                 
+            decoration                
+        }
+        itemDef
+        {
+            rect                      -320 79 240 24 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            borderSize                1
+            foreColor                 1 1 1 0.8
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            textFont                  UI_FONT_NORMAL
+            textAlign                 ITEM_ALIGN_MIDDLE_CENTER
+            textScale                 0.4583
+            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            exp                       text ( ( "@MENU_SERVER_SETTINGS" ) );
+            visible 1                 
+            decoration                
+        }
+
+    
+        itemDef
+        {
+            rect                      -310 210 16 16 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "ui_arrow_left"
+            type                      ITEM_TYPE_BUTTON
+            textScale                 0.55
+            action                    { play mouse_click ; scriptMenuResponse "adminPrevMap" ;  }
+            onFocus                   { play mouse_over ; setLocalVarInt ui_highlight 6 ; setLocalVarString ui_choicegroup  ; ;  }
+            leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
+            visible 1                 
+        }
+        itemDef
+        {
+            rect                      -300 210 16 16 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "ui_arrow_right"
+            type                      ITEM_TYPE_BUTTON
+            textScale                 0.55
+            action                    { play mouse_click ; scriptMenuResponse "adminNextMap" ;  }
+            onFocus                   { play mouse_over ; setLocalVarInt ui_highlight 6 ; setLocalVarString ui_choicegroup  ; ;  }
+            leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
+            visible 1                 
+        }
+        itemDef
+        {
+            rect                      CHOICE_RECT( 6.5 )
+            borderSize                1
+            foreColor                 0.69 0.69 0.69 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            type                      ITEM_TYPE_BUTTON
+            textFont                  UI_FONT_NORMAL
+            textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
+            textAlignX                -10
+            textScale                 0.4
+            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            exp                       text ( ( "Map: " + dvarstring( "ui_aap_mapname" ) ) );
+            visible                   when ( ( dvarint( "ui_isAdmin" ) >= 1 ) )
+            decoration                
+        }
+        itemDef
+        {
+            rect                      -320 210 220 22 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            borderSize                1
+            foreColor                 0.5 0.5 0.5 0.5
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            type                      ITEM_TYPE_BUTTON
+            textFont                  UI_FONT_NORMAL
+            textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
+            textAlignX                -10
+            textScale                 0.4
+            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            exp                       text ( ( "Map: " + dvarstring( "ui_aap_mapname" ) ) );
+            visible                   when ( ( dvarint( "ui_isAdmin" ) < 1 ) )
+            decoration                
+        }
+        itemDef
+        {
+            rect                      -310 234 16 16 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "ui_arrow_left"
+            type                      ITEM_TYPE_BUTTON
+            textScale                 0.55
+            action                    { play mouse_click ; scriptMenuResponse "adminPrevGame" ;  }
+            onFocus                   { play mouse_over ; setLocalVarInt ui_highlight 7 ; setLocalVarString ui_choicegroup  ; ;  }
+            leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
+            visible 1                 
+        }
+        itemDef
+        {
+            rect                      -300 234 16 16 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "ui_arrow_right"
+            type                      ITEM_TYPE_BUTTON
+            textScale                 0.55
+            action                    { play mouse_click ; scriptMenuResponse "adminNextGame" ;  }
+            onFocus                   { play mouse_over ; setLocalVarInt ui_highlight 7 ; setLocalVarString ui_choicegroup  ; ;  }
+            leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
+            visible 1                 
+        }
+        itemDef
+        {
+            rect                      CHOICE_RECT( 7.5 )
+            borderSize                1
+            foreColor                 0.69 0.69 0.69 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            type                      ITEM_TYPE_BUTTON
+            textFont                  UI_FONT_NORMAL
+            textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
+            textAlignX                -10
+            textScale                 0.4
+            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            exp                       text ( ( "Gametype: " + dvarstring( "ui_aap_gametype" ) ) );
+            visible 1                 
+            decoration                
+        }
+
+
+        itemDef
+        {
+            rect                      0 130 16 16 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "ui_arrow_left"
+            type                      ITEM_TYPE_BUTTON
+            textScale                 0.55
+            action                    { play mouse_click ; scriptMenuResponse "adminPrevPlayer" ;  }
+            onFocus                   { play mouse_over ; setLocalVarInt ui_highlight 23 ; setLocalVarString ui_choicegroup  ; ;  }
+            leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
+            visible 1                 
+        }
+        itemDef
+        {
+            rect                      10 130 16 16 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            style                     WINDOW_STYLE_SHADER
+            borderSize                1
+            foreColor                 1 1 1 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            background                "ui_arrow_right"
+            type                      ITEM_TYPE_BUTTON
+            textScale                 0.55
+            action                    { play mouse_click ; scriptMenuResponse "adminNextPlayer" ;  }
+            onFocus                   { play mouse_over ; setLocalVarInt ui_highlight 23 ; setLocalVarString ui_choicegroup  ; ;  }
+            leaveFocus                { setLocalVarInt ui_highlight 0 ; ;  }
+            visible 1                 
+        }
+        // Non Wide screen
+        itemDef
+        {
+            rect                      30 130 220 22 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            borderSize                1
+            foreColor                 0.69 0.69 0.69 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            type                      ITEM_TYPE_BUTTON
+            textFont                  UI_FONT_NORMAL
+            textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
+            textAlignX                -10
+            textScale                 0.4
+            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            exp                       text ( ( "Player: " + dvarstring( "ui_aap_playername" ) ) );
+            //visible 1                 
+            visible                   when( !dvarInt( "wideScreen" ) );
+            decoration                
+        }
+        // Wide screen
+        itemDef
+        {
+            rect                      -70 130 220 22 HORIZONTAL_ALIGN_CENTER VERTICAL_ALIGN_TOP
+            borderSize                1
+            foreColor                 0.69 0.69 0.69 1
+            backColor                 0 0 0 0
+            borderColor               0 0 0 0
+            outlineColor              0 0 0 0
+            type                      ITEM_TYPE_BUTTON
+            textFont                  UI_FONT_NORMAL
+            textAlign                 ITEM_ALIGN_MIDDLE_RIGHT
+            textAlignX                -10
+            textScale                 0.4
+            textStyle                 ITEM_TEXTSTYLE_SHADOWEDMORE
+            exp                       text ( ( "Player: " + dvarstring( "ui_aap_playername" ) ) );
+            visible                   when( dvarInt( "wideScreen" ) );
+            decoration                
+        }
+
+        
+        ROZO_AAP_BUTTON_EXT( 3, "@MENU_KILL_STUCK_ZOMBIES", AAP_ACTION( scriptMenuResponse "adminKillAllBots"; ), (dvarint( "ui_isAdmin" ) >= 1) )
+        ROZO_AAP_BUTTON_FAKE( 3, "@MENU_KILL_STUCK_ZOMBIES", (dvarint( "ui_isAdmin" ) < 1) )
+
+        ROZO_AAP_BUTTON_EXT( 4, "@MENU_MAP_ROTATE", AAP_ACTION( scriptMenuResponse "adminMapRotate"; ), (dvarint( "ui_isAdmin" ) >= 1) )
+        ROZO_AAP_BUTTON_FAKE( 4, "@MENU_MAP_ROTATE", (dvarint( "ui_isAdmin" ) < 1) )
+
+        ROZO_AAP_BUTTON_EXT( 5, "@MENU_MAP_RESTART", AAP_ACTION( scriptMenuResponse "adminMapRestart"; ), (dvarint( "ui_isAdmin" ) >= 1) )
+        ROZO_AAP_BUTTON_FAKE( 5, "@MENU_MAP_RESTART", (dvarint( "ui_isAdmin" ) < 1) )
+        CHOICE_SEPARATOR_VIS( 5, 1; )
+
+        ROZO_AAP_BUTTON_EXT( 11, "@MENU_GAME_CHANGE_NOW", AAP_ACTION( scriptMenuResponse "adminGametypeStart"; ), (1) )
+        //ROZO_AAP_BUTTON_FAKE( 11, "@MENU_GAME_CHANGE_NOW", (dvarint( "ui_isAdmin" ) < 1) )
+
+        ROZO_AAP_BUTTON_EXT( 12, "@MENU_GAME_CHANGE_NEXT", AAP_ACTION( scriptMenuResponse "adminGametypeNext"; ), (1) )
+
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 14, "@MENU_PLAYER_SLAP", AAP_ACTION( scriptMenuResponse "adminSlapPlayer"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 15, "@MENU_PLAYER_KILL", AAP_ACTION( scriptMenuResponse "adminKillPlayer"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 16, "@MENU_PLAYER_TAKE_WEAPON", AAP_ACTION( scriptMenuResponse "adminPlayerTakeWeapon"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 17, "@MENU_PLAYER_KICK", AAP_ACTION( scriptMenuResponse "adminKickPlayer"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 18, "@MENU_PLAYER_BAN", AAP_ACTION( scriptMenuResponse "adminBanPlayer"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 19, "@MENU_PLAYER_TELE_TO", AAP_ACTION( scriptMenuResponse "adminTeleToPlayer"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 20, "@MENU_PLAYER_TELE", AAP_ACTION( scriptMenuResponse "adminTelePlayer"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 21, "@MENU_PLAYER_TELE_SP", AAP_ACTION( scriptMenuResponse "adminPlayerTelePS"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 22, "@MENU_PLAYER_TELE_SN", AAP_ACTION( scriptMenuResponse "adminPlayerTeleZS"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 23, "@MENU_PLAYER_SET_SPEC", AAP_ACTION( scriptMenuResponse "adminPlayerSpec"; ), (1) )
+
+        ROZO_AAP_BUTTON_EXT_RIGHT( 24, "@MENU_PLAYER_RERANK", AAP_ACTION( scriptMenuResponse "adminPlayerRerank"; ), (1) )
+    }
+}

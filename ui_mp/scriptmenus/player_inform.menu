@@ -1,0 +1,40 @@
+#include "ui/menudef.h"
+#include "ui_mp/common_macro.inc"
+
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+
+
+    // to be macro menu
+    menuDef 
+    {
+        name            "player_inform"
+        visible         0
+        fullscreen      0
+        rect            0 0 640 480 0 0
+        focusColor      COLOR_FOCUSED
+        style           WINDOW_STYLE_FILLED
+        popup
+        onESC 
+        { 
+            play "mouse_click"; 
+            close "player_inform" 
+        }
+        onOpen 
+        { 
+            exec "set ui_hide_desc 1";
+            focusFirst; 
+        }
+        onClose
+        {
+            exec "set ui_hide_desc 0";
+        }
+
+
+    // player stats
+    #include "ui_mp/player_info.inc"
+
+        
+    #include "ui/safearea.menu"
+         
+    }

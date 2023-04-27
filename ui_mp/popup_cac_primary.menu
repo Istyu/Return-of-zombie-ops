@@ -1,0 +1,56 @@
+#include "ui/menudef.h"
+#include "ui_mp/common_macro.inc"
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+
+#define NO_BG_CLOSE                 1
+
+#undef CHOICE_HORIZONTAL_ALIGN
+#define CHOICE_HORIZONTAL_ALIGN HORIZONTAL_ALIGN_CENTER
+#undef CHOICE_VERTICAL_ALIGN
+#define CHOICE_VERTICAL_ALIGN   VERTICAL_ALIGN_CENTER
+
+// required for popup style
+#include "ui_mp/popupstyle.inc"
+#include "ui/choices_setup_popmenu.menu"
+
+
+//THIS MUST BE CALLED AFTER THE SCRIPTS ARE CALLED
+// setting longer buttons which in turn sets the width of the popup
+#undef CHOICE_SIZE_X
+#define CHOICE_SIZE_X           200
+
+{
+    menuDef
+    {
+    //    CENTER_POPUP_SETUP( popup_cac_primary, 10.5, scriptMenuResponse "close";, 1 )
+        IMPROVED_POPUP_SETUP_ONOPEN( "popup_cac_primary", 5, CHOICE_X( 1 )-320, (CHOICE_Y( 1 )-240), ;, ; ;, 1 )
+        CHOICE_BUTTON_BG( 1, 1 )
+        CHOICE_HIGHLIGHT( 1, 1 )
+        CHOICE_BUTTON_VIS_NOHI( 1, "@MPUI_ASSAULT_RIFLES", play "mouse_click"; open popup_cac_assault;, 1 )
+        CHOICE_NEWICON_VIS( 1, "specialty_new", when( statRangeAnyBitsSet( 3020, 3026, "WEAPON_NEW_BITMASK" ) ); )
+
+        CHOICE_BUTTON_BG( 2, 1 )
+        CHOICE_HIGHLIGHT( 2, 1 )
+        CHOICE_BUTTON_VIS_NOHI( 2, "@MPUI_SUB_MACHINE_GUNS", play "mouse_click"; open popup_cac_SMG;, 1 )
+        CHOICE_NEWICON_VIS( 2, "specialty_new", when( statRangeAnyBitsSet( 3010, 3019, "WEAPON_NEW_BITMASK" ) ); )
+        
+        CHOICE_BUTTON_BG( 3, 1 )
+        CHOICE_HIGHLIGHT( 3, 1 )
+        CHOICE_BUTTON_VIS_NOHI( 3, "@MPUI_LIGHT_MACHINE_GUNS", play "mouse_click"; open popup_cac_LMG;, 1 )
+        CHOICE_NEWICON_VIS( 3, "specialty_new", when( statRangeAnyBitsSet( 3080, 3089, "WEAPON_NEW_BITMASK" ) ); )
+
+        CHOICE_BUTTON_BG( 4, 1 )
+        CHOICE_HIGHLIGHT( 4, 1 )
+        CHOICE_BUTTON_VIS_NOHI( 4, "@MPUI_SHOTGUNS", play "mouse_click"; open popup_cac_shotgun;, 1 )
+        CHOICE_NEWICON_VIS( 4, "specialty_new", when( statRangeAnyBitsSet( 3070, 3079, "WEAPON_NEW_BITMASK" ) ); )
+
+        CHOICE_BUTTON_BG( 5, 1 )
+        CHOICE_HIGHLIGHT( 5, 1 )
+        CHOICE_BUTTON_VIS_NOHI( 5, "@MPUI_SNIPER_RIFLES", play "mouse_click"; open popup_cac_sniper;, 1 )
+        CHOICE_NEWICON_VIS( 5, "specialty_new", when( statRangeAnyBitsSet( 3060, 3069, "WEAPON_NEW_BITMASK" ) ); )
+
+        
+    //    CHOICE_BUTTON( 6, dvarString(customclass1), scriptMenuResponse "cacedit,0"; close self; )
+    }
+}

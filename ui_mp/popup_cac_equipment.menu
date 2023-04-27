@@ -1,0 +1,77 @@
+#include "ui/menudef.h"
+#include "ui_mp/common_macro.inc"
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+
+#define NO_BG_CLOSE                 1
+
+#undef CHOICE_HORIZONTAL_ALIGN
+#define CHOICE_HORIZONTAL_ALIGN HORIZONTAL_ALIGN_CENTER
+#undef CHOICE_VERTICAL_ALIGN
+#define CHOICE_VERTICAL_ALIGN   VERTICAL_ALIGN_CENTER
+
+// required for popup style
+#include "ui_mp/popupstyle.inc"
+#include "ui/choices_setup_popmenu.menu"
+
+
+#undef CHOICE_SIZE_X
+#define CHOICE_SIZE_X           200
+
+    // including weapon data
+    //#include "ui_mp/weaponinfo.menu"
+
+//;
+
+    // ====================================================================================================
+    // equipment selection ================================================================================
+    // ====================================================================================================
+{
+    menuDef 
+    {
+//    #define IMPROVED_POPUP_SETUP_ONOPEN( nameArg, itemCount, xArg, yArg, onEscArg, onOpenArg, shadow_visArg )
+        IMPROVED_POPUP_SETUP_ONOPEN( popup_cac_equipment, 7, (CHOICE_X( 1 )-320), (CHOICE_Y( 1 )-120), ;, ; execnow "set ui_sidearm_highlighted c4";, 1 )
+
+        PREPROC_SHADER_DRAW_ALIGNED( (CHOICE_POPUP_WIDTH-6) -4 280 CHOICE_POPUP_HEIGHT( 7 ) CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN, 0 0, "white", CHOICE_POPUP_BORDER_COLOR, 1, 2, CHOICE_POPUP_BORDER_COLOR; )
+        LOADOUT_PLATING_RAW( CHOICE_POPUP_WIDTH 8, -2, 0, 280, (CHOICE_POPUP_HEIGHT( 7 )-4), CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN;, 0, 0 )
+        PREPROC_SHADER_DRAW_ALIGNED_VIS( (CHOICE_POPUP_WIDTH+6) 30 346 48 CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN, 0 0, "gradient_bottom", 1 1 1 0.3, 0, 2, CHOICE_POPUP_BORDER_COLOR, 1; )
+        // --weapon image--
+    //    PREPROC_SHADER_DRAW_ALIGNED_VIS( prect, porigin, pshader, pcolor, pborder, pbordersize, pbordercolor, visArg )
+        PREPROC_SHADER_DRAW_ALIGNED_VIS( (CHOICE_POPUP_WIDTH+72) -6 90 90 CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN, 0 0, tablelookup("mp/statsTable.csv",4,dvarstring( "ui_sidearm_highlighted" ),6), 1 1 1 1, 0, 2, CHOICE_POPUP_BORDER_COLOR, 1; )
+        // ---Weapon name---
+        PREPROC_TEXT_DRAW_ALIGNED_EXP( (CHOICE_POPUP_WIDTH+10) 58 256 20 CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN, 0 0, "@"+tablelookup("mp/statstable.csv",4,dvarstring( "ui_sidearm_highlighted" ),3), TEXTSIZE_DEFAULT, 0, 0, ITEM_ALIGN_MIDDLE_LEFT, COLOR_TITLE visible when ( ( dvarstring( "ui_inside_popup" ) != "attachment" ) ); )
+        // ---weapon desc unlocked--
+        PREPROC_TEXT_DRAW_ALIGNED_EXP( (CHOICE_POPUP_WIDTH+10) 80 256 20 CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN, 0 0, "@"+tablelookup("mp/statstable.csv" ,4 ,dvarstring( "ui_sidearm_highlighted" ),7), TEXTSIZE_SMALL, 0, 0, ITEM_ALIGN_MIDDLE_LEFT, CHOICE_TEXTCOLOR visible when( (stat( int( tablelookup( "mp/statsTable.csv" , 4 , dvarstring( "ui_sidearm_highlighted" ) , 0 ) ) ) > 1) ); ) 
+        // ---Cost---
+        PREPROC_TEXT_DRAW_ALIGNED_EXP( (CHOICE_POPUP_WIDTH+10) 80 256 20 CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN, 0 0, "@PERKS_COST_"+tablelookup( "mp/statstable.csv" , 4 , dvarstring( "ui_sidearm_highlighted" ) , 11 ), TEXTSIZE_SMALL, 0, 0, ITEM_ALIGN_MIDDLE_LEFT, COLOR_TITLE visible when ( ( stat( int( tablelookup( "mp/statsTable.csv" , 4 , dvarstring( "ui_sidearm_highlighted" ) , 0 ) ) ) == 1 ) ); ) 
+        // ---Unlocked at---
+        PREPROC_TEXT_DRAW_ALIGNED_EXP( (CHOICE_POPUP_WIDTH+10) 80 256 20 CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN, 0 0, "@"+tablelookup( "mp/statstable.csv" , 4 , dvarstring( "ui_sidearm_highlighted" ) , 10 ), TEXTSIZE_SMALL, 0, 0, ITEM_ALIGN_MIDDLE_LEFT, COLOR_TITLE visible when ( ( stat( int( tablelookup( "mp/statsTable.csv" , 4 , dvarstring( "ui_sidearm_highlighted" ) , 0 ) ) ) == 0 ) ); ) 
+
+
+        CHOICE_BUTTON_BG( 1, 1 )
+        CHOICE_HIGHLIGHT( 1, 1 )
+        // ---Attach---
+        CHOICE_BUTTON_FOCUS_VIS_NOHI( 1, "@WEAPON_C4", play "mouse_click"; scriptMenuResponse "statset#207#c4";, play mouse_submenu_over ; setLocalVarInt ui_highlight 1 ; setLocalVarString ui_choicegroup popmenu ; execnow "set ui_sidearm_highlighted c4",; setLocalVarInt ui_highlight 0;, when ( ( stat( tablelookup( "mp/statstable.csv" , 4 , "c4" , 0 ) ) >= 2 ) ); )
+        // ---Buy---
+        CHOICE_BUTTON_FOCUS_VIS_NOHI( 1, "@WEAPON_C4", play "mouse_click"; scriptMenuResponse "buyitem#c4";, play mouse_submenu_over ; setLocalVarInt ui_highlight 1 ; setLocalVarString ui_choicegroup popmenu ; execnow "set ui_sidearm_highlighted c4",; setLocalVarInt ui_highlight 0;, when ( ( stat( tablelookup( "mp/statstable.csv" , 4 , "c4" , 0 ) ) == 1 ) ); )
+        // ---Locked---
+        CHOICE_BUTTON_FOCUS_VIS( 1, "@WEAPON_C4", ;, play mouse_submenu_over ; setLocalVarInt ui_highlight 1 ; setLocalVarString ui_choicegroup popmenu ; execnow "set ui_sidearm_highlighted c4",; setLocalVarInt ui_highlight 0;, when ( ( stat( tablelookup( "mp/statstable.csv" , 4 , "c4" , 0 ) ) < 1 ) ) )
+        // ---Locked and new icon---
+        CHOICE_NEWICON_VIS( 1, "specialty_locked", when( stat( tablelookup( "mp/statstable.csv" , 4 , "c4" , 0 ) ) < 1 ); ) 
+        CHOICE_NEWICON_VIS( 1, "specialty_new", when( stat( tablelookup( "mp/statstable.csv" , 4 , "c4" , 0 ) ) == 1 ) )
+
+
+        CHOICE_BUTTON_BG( 2, 1 )
+        CHOICE_HIGHLIGHT( 2, 1 )
+        // ---Attach---
+        CHOICE_BUTTON_FOCUS_VIS_NOHI( 2, "@WEAPON_CLAYMORE", play "mouse_click"; scriptMenuResponse "statset#207#claymore";, play mouse_submenu_over ; setLocalVarInt ui_highlight 2 ; setLocalVarString ui_choicegroup popmenu ; execnow "set ui_sidearm_highlighted claymore",; setLocalVarInt ui_highlight 0;, when ( ( stat( tablelookup( "mp/statstable.csv" , 4 , "claymore" , 0 ) ) >= 2 ) ); )
+        // ---Buy---
+        CHOICE_BUTTON_FOCUS_VIS_NOHI( 2, "@WEAPON_CLAYMORE", play "mouse_click"; scriptMenuResponse "buyitem#claymore";, play mouse_submenu_over ; setLocalVarInt ui_highlight 2 ; setLocalVarString ui_choicegroup popmenu ; execnow "set ui_sidearm_highlighted claymore",; setLocalVarInt ui_highlight 0;, when ( ( stat( tablelookup( "mp/statstable.csv" , 4 , "claymore" , 0 ) ) == 1 ) ); )
+        // ---Locked---
+        CHOICE_BUTTON_FOCUS_VIS( 2, "@WEAPON_CLAYMORE", ;, play mouse_submenu_over ; setLocalVarInt ui_highlight 2 ; setLocalVarString ui_choicegroup popmenu ; execnow "set ui_sidearm_highlighted claymore",; setLocalVarInt ui_highlight 0;, when ( ( stat( tablelookup( "mp/statstable.csv" , 4 , "claymore" , 0 ) ) < 1 ) ) )
+        // ---Locked and new icon---
+        CHOICE_NEWICON_VIS( 2, "specialty_locked", when( stat( tablelookup( "mp/statstable.csv" , 4 , "claymore" , 0 ) ) < 1 ); ) 
+        CHOICE_NEWICON_VIS( 2, "specialty_new", when( stat( tablelookup( "mp/statstable.csv" , 4 , "claymore" , 0 ) ) == 1 ) )
+    }
+}
+

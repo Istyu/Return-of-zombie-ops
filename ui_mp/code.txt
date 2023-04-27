@@ -1,0 +1,27 @@
+{
+    loadMenu { "ui_mp/error_popmenu.menu" }
+    loadMenu { "ui_mp/save_corrupted.menu" }
+    loadMenu { "ui_mp/popup_gettingdata.menu" }
+    loadMenu { "ui_mp/error_popmenu_party.menu" }
+    loadMenu { "ui_mp/error_popmenu_lobby.menu" }
+    loadMenu { "ui_mp/popup_reconnectingtoparty.menu" }
+    loadMenu { "ui_mp/acceptinvite_warning.menu" }
+    loadMenu { "ui_mp/pregame_loaderror.menu" }
+    loadMenu { "ui_mp/pregame_loaderror_mp.menu" }
+    loadMenu { "ui_mp/connect.menu" }
+    loadMenu { "ui_mp/menu_cac.menu" }
+    loadMenu { "ui_mp/popup_cac_primary.menu" }
+    loadMenu { "ui_mp/popup_cac_secondary.menu" }
+    loadMenu { "ui_mp/popup_cac_pistol.menu" }
+    loadMenu { "ui_mp/popup_cac_mpistol.menu" }
+    loadMenu { "ui_mp/popup_cac_projectile.menu" }
+    loadMenu { "ui_mp/popup_cac_equipment.menu" }
+    loadMenu { "ui_mp/popup_cac_grenade.menu" }
+    loadMenu { "ui_mp/popup_cac_sgrenade.menu" }
+    loadMenu { "ui_mp/popup_cac_perk.menu" }
+    loadMenu { "ui_mp/popup_cac_assault.menu" }
+    loadMenu { "ui_mp/popup_cac_smg.menu" }
+    loadMenu { "ui_mp/popup_cac_lmg.menu" }
+    loadMenu { "ui_mp/popup_cac_shotgun.menu" }
+    loadMenu { "ui_mp/popup_cac_sniper.menu" }
+}

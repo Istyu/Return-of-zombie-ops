@@ -1,0 +1,436 @@
+#include "ui/menudef.h"
+#include "ui_mp/common_macro.inc"
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+
+//#define CHOICE_GROUP                "rozo_perks"
+#define NO_BG_CLOSE                 1
+
+#undef CHOICE_HORIZONTAL_ALIGN
+#define CHOICE_HORIZONTAL_ALIGN HORIZONTAL_ALIGN_CENTER
+#undef CHOICE_VERTICAL_ALIGN
+#define CHOICE_VERTICAL_ALIGN   VERTICAL_ALIGN_CENTER
+
+// required for popup style
+#include "ui_mp/popupstyle.inc"
+#include "ui/choices_setup_popmenu.menu"
+
+
+//THIS MUST BE CALLED AFTER THE SCRIPTS ARE CALLED
+// setting longer buttons which in turn sets the width of the popup
+#undef CHOICE_SIZE_X
+#define CHOICE_SIZE_X           320
+
+#define PERK_IMAGE_WIDTH    128
+#define PERK_IMAGE_HEIGHT   64
+#define PERK_IMAGE_RECT \
+    /* origin    */ ( CHOICE_POPUP_WIDTH - (CHOICE_POPUP_BORDER_X * 2) - PERK_IMAGE_WIDTH ) \
+        ( CHOICE_POPUP_BORDER_Y) \
+    /* size      */ PERK_IMAGE_WIDTH PERK_IMAGE_HEIGHT \
+    /* alignment */ CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN    
+
+#define PERK_BACKSHADER_WIDTH    328
+#define PERK_BACKSHADER_HEIGHT   64
+#define PERK_BACKSHADER_RECT \
+    /* origin    */ ( CHOICE_POPUP_WIDTH - (CHOICE_POPUP_BORDER_X * 2) - PERK_BACKSHADER_WIDTH ) \
+        ( CHOICE_POPUP_BORDER_Y) \
+    /* size      */ PERK_BACKSHADER_WIDTH PERK_BACKSHADER_HEIGHT \
+    /* alignment */ CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN
+
+
+// ---------------------------/WINDOW Definitions\---------------------------
+#define ROZO_PERK_IMAGE( itemIndex, imageArg ) \
+    itemDef \
+    { \
+        style           WINDOW_STYLE_FILLED \
+        rect            PERK_IMAGE_RECT \
+        backcolor       0.25 0.25 0.25 0.6  \
+        visible         when( localVarInt( ui_highlight ) == itemIndex && localVarString( ui_choicegroup ) == CHOICE_GROUP ); \
+        decoration \
+    }\
+    itemDef\
+    {\
+        style           WINDOW_STYLE_SHADER\
+        rect            PERK_IMAGE_RECT\
+        background      "gradient_top"\
+        visible         when( localVarInt( ui_highlight ) == itemIndex && localVarString( ui_choicegroup ) == CHOICE_GROUP ); \
+        decoration\
+    }   \
+    itemDef \
+    { \
+        name            imageArg \
+        style           WINDOW_STYLE_SHADER \
+        rect            PERK_IMAGE_RECT \
+        exp             material( imageArg ) \
+        visible         when( localVarInt( ui_highlight ) == itemIndex && localVarString( ui_choicegroup ) == CHOICE_GROUP ); \
+        decoration \
+    } \
+
+
+#define PERK_IMAGE_WIDTH_64    64
+#define PERK_IMAGE_HEIGHT_64   64
+#define PERK_IMAGE_RECT_64 \
+    /* origin    */ ( CHOICE_POPUP_WIDTH - (CHOICE_POPUP_BORDER_X * 2) - (PERK_IMAGE_WIDTH_64*1.5) ) \
+        ( CHOICE_POPUP_BORDER_Y) \
+    /* size      */ PERK_IMAGE_WIDTH_64 PERK_IMAGE_HEIGHT_64 \
+    /* alignment */ CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN     
+
+
+// ---------------------------/IMAGES Definitions\---------------------------
+#define ROZO_PERK_IMAGE_64( itemIndex, imageArg ) \
+        itemDef\
+        {\
+            style           WINDOW_STYLE_SHADER\
+            rect            PERK_BACKSHADER_RECT\
+            foreColor                 0.9 0.9 1 0.07\
+            backColor                 0 0 0 0\
+            borderColor               0 0 0 0\
+            outlineColor              0 0 0 0\
+            background      "gradient_fadein"\
+            visible         when( localVarInt( ui_highlight ) == itemIndex && localVarString( ui_choicegroup ) == CHOICE_GROUP ); \
+            decoration\
+        }   \
+        itemDef \
+        { \
+            name            imageArg \
+            style           WINDOW_STYLE_SHADER \
+            rect            PERK_IMAGE_RECT_64 \
+            exp             material( imageArg ) \
+            visible         when( localVarInt( ui_highlight ) == itemIndex && localVarString( ui_choicegroup ) == CHOICE_GROUP ); \
+            decoration \
+        } \
+
+// ---------------------------/DESCRIPTIONS Definitions\---------------------------
+#define ROZO_PERK_DESCRIPTION( itemIndex, textArg, nameArg ) \
+        itemDef \
+        { \
+            name            nameArg \
+            rect            CHOICE_POPUP_BORDER_X 30 100 100 CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN  \
+            exp             text( textArg ) \
+            textfont        UI_FONT_NORMAL \
+            textscale       CHOICE_POPUP_TITLE_TEXTSIZE \
+            textAlign       ITEM_ALIGN_TOP_LEFT \
+            textstyle       CHOICE_TEXTSTYLE \
+            forecolor       CHOICE_TEXTCOLOR \
+            visible         when( localVarInt( ui_highlight ) == itemIndex && localVarString( ui_choicegroup ) == CHOICE_GROUP ); \
+            decoration \
+        } \
+
+// ---------------------------/BUTTONS Definitions\---------------------------
+// ---**Button left text**---
+#define ROZO_CHOICE_BUTTON_VIS_NOHI( itemIndex, textArg, actionArg, visArg ) \
+    itemDef \
+    { \
+        type            ITEM_TYPE_BUTTON \
+        rect            CHOICE_RECT( itemIndex ) \
+        exp             text( textArg ); \
+        textfont        CHOICE_TEXTFONT \
+        textscale       CHOICE_TEXTSIZE \
+        textstyle       CHOICE_TEXTSTYLE \
+        textAlign       ITEM_ALIGN_MIDDLE_LEFT \
+        textAlignX      1 \
+        forecolor       CHOICE_TEXTCOLOR \
+        visible         when( visArg ) \
+        CHOICE_SCRIPTS_ALL( itemIndex, actionArg, ;, ; ) \
+    }
+
+// ---**Button right text**---
+#define ROZO_CHOICE_BUTTON_EXT( itemIndex, nameArg, costArg, actionArg, visArg ) \
+    CHOICE_BUTTON_BG( itemIndex, 1 ) \
+    CHOICE_HIGHLIGHT( itemIndex, 1 ) \
+    itemDef \
+    { \
+        type            ITEM_TYPE_TEXT \
+        rect            CHOICE_RECT( itemIndex ) \
+        exp             text( costArg ); \
+        textfont        CHOICE_TEXTFONT \
+        textscale       CHOICE_TEXTSIZE \
+        textstyle       CHOICE_TEXTSTYLE \
+        textAlign       ITEM_ALIGN_MIDDLE_RIGHT \
+        textAlignX      CHOICE_TEXT_OFFSET_X \
+        forecolor       CHOICE_TEXTCOLOR \
+        visible         when( visArg ) \
+    } \
+    ROZO_CHOICE_BUTTON_VIS_NOHI( itemIndex, nameArg, actionArg, visArg )
+
+#define ROZO_CHOICE_BUTTON( itemIndex, textArg, actionArg, visArg ) \
+    CHOICE_BUTTON_BG( itemIndex, 1 ) \
+    CHOICE_HIGHLIGHT( itemIndex, 1 ) \
+    ROZO_CHOICE_BUTTON_VIS_NOHI( itemIndex, textArg, actionArg, visArg )
+
+// ---------------------------/BACK BUTTON Definitions\---------------------------
+#define ROZO_BACK_PERK( itemIndex, textArg ) \
+    ROZO_BACK_PERK_VIS( itemIndex, textArg )
+
+#define ROZO_BACK_PERK_VIS( itemIndex, textArg ) \
+    itemDef \
+    { \
+        type            ITEM_TYPE_TEXT \
+        rect            CHOICE_RECT( itemIndex ) \
+        exp             text( textArg ); \
+        textfont        CHOICE_TEXTFONT \
+        textscale       CHOICE_TEXTSIZE \
+        textstyle       CHOICE_TEXTSTYLE \
+        textAlign       ITEM_ALIGN_MIDDLE_LEFT \
+        textAlignX      1 \
+        forecolor       CHOICE_TEXTCOLOR \
+        visible         1 \
+        decoration \
+    }
+
+
+// ---------------------------/Title Top Left\---------------------------
+#define CHOICE_POPMENU_TITLE_TOPLEFT( textArg ) \
+        CHOICE_POPMENU_TITLE_TOPLEFT_VIS( textArg, 1 )
+        
+#define CHOICE_POPMENU_TITLE_TOPLEFT_VIS( textArg, visArg ) \
+        itemDef \
+        { \
+            type            ITEM_TYPE_BUTTON \
+            rect            CHOICE_POPUP_BORDER_X CHOICE_POPUP_BORDER_Y 100 100 CHOICE_HORIZONTAL_ALIGN CHOICE_VERTICAL_ALIGN  \
+            exp             text(textArg); \
+            textfont        UI_FONT_NORMAL \
+            textscale       CHOICE_POPUP_TITLE_TEXTSIZE \
+            textAlign       ITEM_ALIGN_TOP_LEFT \
+            textstyle       CHOICE_TEXTSTYLE \
+            forecolor       CHOICE_TEXTCOLOR \
+            visible         visArg \
+            decoration \
+        }
+
+/*
+#define ROZO_BACK_MONEY( itemIndex, textArg ) \
+    ROZO_BACK_MONEY_VIS( itemIndex, textArg )
+
+#define ROZO_BACK_MONEY_VIS( itemIndex, textArg ) \
+    itemDef \
+    { \
+        type            ITEM_TYPE_TEXT \
+        rect            CHOICE_RECT( itemIndex ) \
+        exp             text( textArg ); \
+        textfont        CHOICE_TEXTFONT \
+        textscale       CHOICE_TEXTSIZE \
+        textstyle       CHOICE_TEXTSTYLE \
+        textAlign       ITEM_ALIGN_MIDDLE_LEFT \
+        textAlignX      1 \
+        forecolor       CHOICE_TEXTCOLOR \
+        visible         1 \
+        decoration \
+    }*/
+//------------------ Main -----------------------
+
+#define PERK_ACTION( actionArg ) \
+    play "mouse_click"; \
+    close popup_cac_perk; \
+    close popup_cac_perk2; \
+    close popup_cac_perk3; \
+    actionArg
+
+    #define BACK_PERK \
+    PERK_ACTION( open popup_cac_perk; )
+
+    #define BACK_PERK2 \
+    PERK_ACTION( open popup_cac_perk2; )
+
+{
+    menuDef
+    {
+        CENTER_POPUP_SETUP( popup_cac_perk, 10.5, scriptMenuResponse "close";, 1 )
+        CHOICE_POPMENU_TITLE_TOPLEFT( "@MPUI_PERK_1" )
+       
+        ROZO_PERK_IMAGE_64( 5, "specialty_bulletdamage" )
+        ROZO_PERK_IMAGE_64( 6, "specialty_extraammo" )
+        ROZO_PERK_IMAGE_64( 7, "specialty_gpsjammer" )
+        ROZO_PERK_IMAGE_64( 8, "specialty_armorvest" )
+        ROZO_PERK_IMAGE_64( 9, "specialty_detectexplosive" )
+
+        // ROZO_PERK_DESCRIPTION( itemIndex, textArg, nameArg ) \
+        ROZO_PERK_DESCRIPTION( 5, "@" + tablelookup( "mp/statstable.csv", 1, 81, 7 ), "PERK_LIGHTWEIGHT" );
+        ROZO_PERK_DESCRIPTION( 6, "@" + tablelookup( "mp/statstable.csv", 1, 84, 7 ), "PERK_SCAVENGER" );
+        ROZO_PERK_DESCRIPTION( 7, "@" + tablelookup( "mp/statstable.csv", 1, 87, 7 ), "PERK_GHOST" );
+        ROZO_PERK_DESCRIPTION( 8, "@" + tablelookup( "mp/statstable.csv", 1, 90, 7 ), "PERK_JUGGERNAUT" );
+        ROZO_PERK_DESCRIPTION( 9, "@" + tablelookup( "mp/statstable.csv", 1, 93, 7 ), "PERK_HARDLINE" );
+
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_LIGHTWEIGHT", "Available LV17", PERK_ACTION( scriptMenuResponse "statset#208#specialty_lightweight"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_lightweight" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_LIGHTWEIGHT", "0$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_lightweight"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_lightweight" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_SCAVENGER", "Available LV25", PERK_ACTION( scriptMenuResponse "statset#208#specialty_scavenger"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_scavenger" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_SCAVENGER", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_scavenger"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_scavenger" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_GHOST", "Available LV74", PERK_ACTION( scriptMenuResponse "statset#208#specialty_ghost"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_ghost" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_GHOST", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_ghost"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_ghost" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_JUGGERNAUT", "Available LV33", PERK_ACTION( scriptMenuResponse "statset#208#specialty_armorvest"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_armorvest" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_JUGGERNAUT", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_armorvest"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_armorvest" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_HARDLINE", "Available LV53", PERK_ACTION( scriptMenuResponse "statset#208#specialty_hardline"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_hardline" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_HARDLINE", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_hardline"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_hardline" , 1 ) ) == 1 ) )
+        
+    //    ROZO_CHOICE_BUTTON( 10, "@MPUI_PERK_1_2", PERK_ACTION( open popup_cac_perk_2; ), 1 )
+        CHOICE_SEPARATOR_VIS( 9, 1; )
+        CHOICE_BUTTON( 10.5, "Close", PERK_ACTION( scriptMenuResponse "close"; ) )
+        //ROZO_BACK_PERK( 11.5, dvarString("")  )
+    }
+/*
+    menuDef // PERK 1 2
+    {
+        CENTER_POPUP_SETUP( popup_cac_perk_2, 11.5, scriptMenuResponse "close";, 1 )
+        CHOICE_POPMENU_TITLE_TOPLEFT( "@MPUI_PERK_1_2" )
+       
+        ROZO_PERK_IMAGE_64( 5, "specialty_bulletdamage" )
+        ROZO_PERK_IMAGE_64( 6, "specialty_extraammo" )
+        ROZO_PERK_IMAGE_64( 7, "specialty_gpsjammer" )
+        ROZO_PERK_IMAGE_64( 8, "specialty_armorvest" )
+        ROZO_PERK_IMAGE_64( 9, "specialty_detectexplosives" )
+
+        // ROZO_PERK_DESCRIPTION( itemIndex, textArg, nameArg ) \
+        ROZO_PERK_DESCRIPTION( 5, "@" + tablelookup( "mp/statstable.csv", 1, 82, 7 ), "PERK_LIGHTWEIGHT_2" );
+        ROZO_PERK_DESCRIPTION( 6, "@" + tablelookup( "mp/statstable.csv", 1, 85, 7 ), "PERK_SCAVENGER_2" );
+        ROZO_PERK_DESCRIPTION( 7, "@" + tablelookup( "mp/statstable.csv", 1, 88, 7 ), "PERK_GHOST_2" );
+        ROZO_PERK_DESCRIPTION( 8, "@" + tablelookup( "mp/statstable.csv", 1, 91, 7 ), "PERK_JUGGERNAUT_2" );
+        ROZO_PERK_DESCRIPTION( 9, "@" + tablelookup( "mp/statstable.csv", 1, 94, 7 ), "PERK_HARDLINE_2" );
+
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_LIGHTWEIGHT", "Available LV17", PERK_ACTION( scriptMenuResponse "statset#208#specialty_lightweight"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_lightweight" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_LIGHTWEIGHT", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_lightweight"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_lightweight" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_SCAVENGER", "Available LV25", PERK_ACTION( scriptMenuResponse "statset#208#specialty_scavenger"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_scavenger" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_SCAVENGER", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_scavenger"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_scavenger" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_GHOST", "Available LV74", PERK_ACTION( scriptMenuResponse "statset#208#specialty_ghost"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_ghost" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_GHOST", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_ghost"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_ghost" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_JUGGERNAUT", "Available LV33", PERK_ACTION( scriptMenuResponse "statset#208#specialty_armorvest"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_armorvest" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_JUGGERNAUT", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_armorvest"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_armorvest" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_HARDLINE", "Available LV53", PERK_ACTION( scriptMenuResponse "statset#208#specialty_hardline"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_hardline" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_HARDLINE", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_hardline"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_hardline" , 1 ) ) == 1 ) )
+        
+        ROZO_CHOICE_BUTTON( 10, "@MPUI_PERK_1_PRO", PERK_ACTION( open popup_cac_perk_pro; ), 1 )
+        CHOICE_SEPARATOR_VIS( 10, 1; )
+        CHOICE_BUTTON( 11.5, "Close", PERK_ACTION( scriptMenuResponse "close"; ) )
+        //ROZO_BACK_PERK( 11.5, dvarString("")  )
+    }
+
+    menuDef // PERK 1 PRO
+    {
+        CENTER_POPUP_SETUP( popup_cac_perk_pro, 11.5, scriptMenuResponse "close";, 1 )
+        CHOICE_POPMENU_TITLE_TOPLEFT( "@MPUI_PERK_1_PRO" )
+       
+        ROZO_PERK_IMAGE_64( 5, "specialty_bulletdamage_pro" )
+        ROZO_PERK_IMAGE_64( 6, "specialty_extraammo_pro" )
+        ROZO_PERK_IMAGE_64( 7, "specialty_gpsjammer_pro" )
+        ROZO_PERK_IMAGE_64( 8, "specialty_armorvest_pro" )
+        ROZO_PERK_IMAGE_64( 9, "specialty_detectexplosive_pro" )
+
+        // ROZO_PERK_DESCRIPTION( itemIndex, textArg, nameArg ) \
+        ROZO_PERK_DESCRIPTION( 5, "@" + tablelookup( "mp/statstable.csv", 1, 83, 7 ), "PERK_LIGHTWEIGHT_PRO" );
+        ROZO_PERK_DESCRIPTION( 6, "@" + tablelookup( "mp/statstable.csv", 1, 86, 7 ), "PERK_SCAVENGER_PRO" );
+        ROZO_PERK_DESCRIPTION( 7, "@" + tablelookup( "mp/statstable.csv", 1, 89, 7 ), "PERK_GHOST_PRO" );
+        ROZO_PERK_DESCRIPTION( 8, "@" + tablelookup( "mp/statstable.csv", 1, 92, 7 ), "PERK_JUGGERNAUT_PRO" );
+        ROZO_PERK_DESCRIPTION( 9, "@" + tablelookup( "mp/statstable.csv", 1, 95, 7 ), "PERK_HARDLINE_PRO" );
+
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_LIGHTWEIGHT", "Available LV17", PERK_ACTION( scriptMenuResponse "statset#208#specialty_lightweight"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_lightweight" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_LIGHTWEIGHT", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_lightweight"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_lightweight" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_SCAVENGER", "Available LV25", PERK_ACTION( scriptMenuResponse "statset#208#specialty_scavenger"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_scavenger" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_SCAVENGER", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_scavenger"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_scavenger" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_GHOST", "Available LV74", PERK_ACTION( scriptMenuResponse "statset#208#specialty_ghost"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_ghost" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_GHOST", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_ghost"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_ghost" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_JUGGERNAUT", "Available LV33", PERK_ACTION( scriptMenuResponse "statset#208#specialty_armorvest"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_armorvest" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_JUGGERNAUT", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_armorvest"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_armorvest" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_HARDLINE", "Available LV53", PERK_ACTION( scriptMenuResponse "statset#208#specialty_hardline"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_hardline" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_HARDLINE", "3000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_hardline"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_hardline" , 1 ) ) == 1 ) )
+        
+        ROZO_CHOICE_BUTTON( 10, "@MPUI_PERK_1", PERK_ACTION( open popup_cac_perk2; ), 1 )
+        CHOICE_SEPARATOR_VIS( 10, 1; )
+        CHOICE_BUTTON( 11.5, "Close", PERK_ACTION( scriptMenuResponse "close"; ) )
+        //ROZO_BACK_PERK( 11.5, dvarString("")  )
+    }
+*/
+    menuDef
+    {
+        CENTER_POPUP_SETUP( popup_cac_perk2, 10.5, scriptMenuResponse "close";, 1 )
+        CHOICE_POPMENU_TITLE_TOPLEFT( "@MPUI_PERK_2" )
+       
+        ROZO_PERK_IMAGE_64( 5, "specialty_bulletpenetration" )
+        ROZO_PERK_IMAGE_64( 6, "specialty_holdbreath" )
+        ROZO_PERK_IMAGE_64( 7, "specialty_bulletaccuracy" )
+        ROZO_PERK_IMAGE_64( 8, "specialty_fastreload" )
+        ROZO_PERK_IMAGE_64( 9, "specialty_explosivedamage" )
+
+        // ROZO_PERK_DESCRIPTION( itemIndex, textArg, nameArg ) \
+        ROZO_PERK_DESCRIPTION( 5, "@" + tablelookup( "mp/statstable.csv", 1, 111, 7 ), "PERK_DEEPIMPACT" );
+        ROZO_PERK_DESCRIPTION( 6, "@" + tablelookup( "mp/statstable.csv", 1, 114, 7 ), "PERK_SCOUT" );
+        ROZO_PERK_DESCRIPTION( 7, "@" + tablelookup( "mp/statstable.csv", 1, 117, 7 ), "PERK_HIPFIRE" );
+        ROZO_PERK_DESCRIPTION( 8, "@" + tablelookup( "mp/statstable.csv", 1, 120, 7 ), "PERK_SOH" );
+        ROZO_PERK_DESCRIPTION( 9, "@" + tablelookup( "mp/statstable.csv", 1, 123, 7 ), "PERK_WARLORD" );
+
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_DEEP_IMPACT", "Available LV17", PERK_ACTION( scriptMenuResponse "statset#209#specialty_bulletpenetration"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_bulletpenetration" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_DEEP_IMPACT", "0$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_bulletpenetration"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_bulletpenetration" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_SCOUT", "Available LV49", PERK_ACTION( scriptMenuResponse "statset#209#specialty_holdbreath"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_holdbreath" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_SCOUT", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_holdbreath"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_holdbreath" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_STEADY_AIM", "Available LV29", PERK_ACTION( scriptMenuResponse "statset#209#specialty_bulletaccuracy"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_bulletaccuracy" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_STEADY_AIM", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_bulletaccuracy"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_bulletaccuracy" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_SLEIGHT_OF_HAND", "Available LV41", PERK_ACTION( scriptMenuResponse "statset#209#specialty_fastreload"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_fastreload" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_SLEIGHT_OF_HAND", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_fastreload"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_fastreload" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_WARLORD", "Available LV69", PERK_ACTION( scriptMenuResponse "statset#209#specialty_warlord"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_warlord" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_WARLORD", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_warlord"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_warlord" , 1 ) ) == 1 ) )
+
+        //ROZO_CHOICE_BUTTON_EXT( 10, "@OVERKILL", "Available", PERK_ACTION( scriptMenuResponse ""; ), () )
+        //ROZO_CHOICE_BUTTON_EXT( 10, "@OVERKILL", "Available", PERK_ACTION( scriptMenuResponse ""; ), () )
+
+        //ROZO_CHOICE_BUTTON_EXT( 11, "@DOUBLE_TAP", "Available", PERK_ACTION( scriptMenuResponse ""; ), () )
+        //ROZO_CHOICE_BUTTON_EXT( 11, "@DOUBLE_TAP", "Available", PERK_ACTION( scriptMenuResponse ""; ), () )
+        
+    //    ROZO_CHOICE_BUTTON( 10, "@MPUI_PERK_3", PERK_ACTION( open popup_cac_perk3; ), 1 )
+        CHOICE_SEPARATOR_VIS( 9, 1; )
+        CHOICE_BUTTON( 10.5, "Close", PERK_ACTION( scriptMenuResponse "close"; ) )
+        //ROZO_BACK_PERK( 11.5, dvarString("")  )
+    }
+
+    menuDef
+    {
+        CENTER_POPUP_SETUP( popup_cac_perk3, 10.5, scriptMenuResponse "close";, 1 )
+        CHOICE_POPMENU_TITLE_TOPLEFT( "@MPUI_PERK_3" )
+       
+        ROZO_PERK_IMAGE_64( 5, "specialty_longersprint" )
+        ROZO_PERK_IMAGE_64( 6, "specialty_quieter" )
+        ROZO_PERK_IMAGE_64( 7, "specialty_pistoldeath" )
+        ROZO_PERK_IMAGE_64( 8, "specialty_parabolic" )
+        ROZO_PERK_IMAGE_64( 9, "specialty_grenadepulldeath" )
+
+        // ROZO_PERK_DESCRIPTION( itemIndex, textArg, nameArg ) \
+        ROZO_PERK_DESCRIPTION( 5, "@" + tablelookup( "mp/statstable.csv", 1, 141, 7 ), "PERK_EXTREMECOND" );
+        ROZO_PERK_DESCRIPTION( 6, "@" + tablelookup( "mp/statstable.csv", 1, 144, 7 ), "PERK_DEADSIL" );
+        ROZO_PERK_DESCRIPTION( 7, "@" + tablelookup( "mp/statstable.csv", 1, 147, 7 ), "PERK_LS" );
+        ROZO_PERK_DESCRIPTION( 8, "@" + tablelookup( "mp/statstable.csv", 1, 150, 7 ), "PERK_HACKER" );
+        ROZO_PERK_DESCRIPTION( 9, "@" + tablelookup( "mp/statstable.csv", 1, 153, 7 ), "PERK_TACTMASK" );
+
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_EXTREME_CONDITIONING", "Available LV17", PERK_ACTION( scriptMenuResponse "statset#210#specialty_longersprint"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_longersprint" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 5, "@PERKS_EXTREME_CONDITIONING", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_longersprint"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_longersprint" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_DEAD_SILENCE", "Available LV57", PERK_ACTION( scriptMenuResponse "statset#210#specialty_quieter"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_quieter" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 6, "@PERKS_DEAD_SILENCE", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_quieter"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_quieter" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_LAST_STAND", "Available LV22", PERK_ACTION( scriptMenuResponse "statset#210#specialty_pistoldeath"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_pistoldeath" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 7, "@PERKS_LAST_STAND", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_pistoldeath"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_pistoldeath" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_HACKER", "Available LV37", PERK_ACTION( scriptMenuResponse "statset#210#specialty_hacker"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_hacker" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 8, "@PERKS_HACKER", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_hacker"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_hacker" , 1 ) ) == 1 ) )
+
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_TAKTICAL_MASK", "Available LV61", PERK_ACTION( scriptMenuResponse "statset#210#specialty_gasmask"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_gasmask" , 1 ) ) >= 2 ) )
+        ROZO_CHOICE_BUTTON_EXT( 9, "@PERKS_TAKTICAL_MASK", "2000$", PERK_ACTION( scriptMenuResponse "buyitem#specialty_gasmask"; ), (stat( tablelookup( "mp/statstable.csv" , 4 , "specialty_gasmask" , 1 ) ) == 1 ) )
+        
+    //    ROZO_CHOICE_BUTTON( 10, "@MPUI_PERK_1", PERK_ACTION( open popup_cac_perk; ), 1 )
+        CHOICE_SEPARATOR_VIS( 9, 1; )
+        CHOICE_BUTTON( 10.5, "Close", PERK_ACTION( scriptMenuResponse "close"; ) )
+        //ROZO_BACK_PERK( 11.5, dvarString("") )
+    }
+}

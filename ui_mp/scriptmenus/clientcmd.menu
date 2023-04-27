@@ -1,0 +1,21 @@
+#include "ui/menudefinition.h"
+
+#include "ui_mp/common_macro.inc"
+
+{
+    menuDef
+    {
+        name                      "clientcmd"
+        rect                      0 0 1 1 HORIZONTAL_ALIGN_SUBLEFT VERTICAL_ALIGN_SUBTOP
+        borderSize                1
+        foreColor                 1 1 1 1
+        backColor                 0 0 0 0
+        borderColor               0 0 0 0
+        outlineColor              0 0 0 0
+        onOpen                    { exec "vstr clientcmd" ; close clientcmd ;  }
+        onClose                   { setDvar cl_bypassMouseInput 0 ;  }
+        focusColor                0 0 0 0
+        disableColor              0 0 0 0
+        visible 0                 
+    }
+}
