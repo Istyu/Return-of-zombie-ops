@@ -1,0 +1,114 @@
+
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Extracted from fastfile."
+
+REFERENCE           DYK_MSG1
+LANG_ENGLISH        "Play as a team to survive longer."
+
+REFERENCE           DYK_MSG2
+LANG_ENGLISH        "At the time you see the first zombies, don't ask, just kill..."
+
+REFERENCE           DYK_MSG3
+LANG_ENGLISH        "Don't face zombies unarmed or you'll get killed."
+
+REFERENCE           DYK_MSG4
+LANG_ENGLISH        "Protect yourself from the zombies by using garment, gasmasks and other gear you can buy."
+
+REFERENCE           DYK_MSG5
+LANG_ENGLISH        "Fight only lone zombies or small groups, in case of an orgy run."
+
+REFERENCE           DYK_MSG6
+LANG_ENGLISH        "Keep an eye on your ammo and buy new ammo in time."
+
+REFERENCE           DYK_MSG7
+LANG_ENGLISH        "Help other survivors so you all live longer."
+
+REFERENCE           DYK_MSG8
+LANG_ENGLISH        "Stick in small groups so you got a higher chance to survive."
+
+REFERENCE           DYK_MSG9
+LANG_ENGLISH        "The Tactical Mask helps protects you from zombie gas and tabun gas."
+
+REFERENCE           DYK_MSG10
+LANG_ENGLISH        "Don't play alone or you'll not make it and regret it."
+
+REFERENCE           DYK_MSG11
+LANG_ENGLISH        "The Cobra helicopter killstreak supports you from above when called in."
+
+REFERENCE           DYK_MSG12
+LANG_ENGLISH        "Rank up to unlock new weapons in the shops."
+
+REFERENCE           DYK_MSG13
+LANG_ENGLISH        "Use the green dollars to buy stuff in the create a class. Use the white points for the shops on the map."
+
+REFERENCE           DYK_MSG14
+LANG_ENGLISH        "Woooooooooohooooooooooooow. You just have to survive."
+
+REFERENCE           DYK_MSG15
+LANG_ENGLISH        "Just fight."
+
+REFERENCE           DYK_MSG16
+LANG_ENGLISH        "Changes in your loudout will take effect after the next respawn or revive."
+
+REFERENCE           DYK_MSG17
+LANG_ENGLISH        "Aim for the head, most weapons make an instand kill headshot."
+
+REFERENCE           DYK_MSG18
+LANG_ENGLISH        "Be prepared for attacks at any time."
+
+REFERENCE           DYK_MSG19
+LANG_ENGLISH        "Don't panic when you face to much zombies, throw a 'nade and run"
+
+REFERENCE           DYK_MSG20
+LANG_ENGLISH        "Try to find a safe place to dig in."
+
+REFERENCE           DYK_MSG21
+LANG_ENGLISH        "Nukes are NO GO, but they are funny."
+
+REFERENCE           DYK_MSG22
+LANG_ENGLISH        "Distance is the key to success."
+
+REFERENCE           DYK_MSG23
+LANG_ENGLISH        "No place is safe, use it anyways."
+
+REFERENCE           DYK_MSG24
+LANG_ENGLISH        "Think twice before you shoot and don't try to be Rambo."
+
+REFERENCE           DYK_MSG25
+LANG_ENGLISH        "Optimism is your friend."
+
+REFERENCE           DYK_MSG26
+LANG_ENGLISH        "You're not Chuck Norris, so don't try to be the hero."
+
+REFERENCE           DYK_MSG27
+LANG_ENGLISH        "Remember, you're not the Terminator."
+
+REFERENCE           DYK_MSG28
+LANG_ENGLISH        "Use your money carefully and don't waste it."
+
+REFERENCE           DYK_MSG29
+LANG_ENGLISH        "Don't be an idiot. Just because you're still alive don't drop your guard."
+
+REFERENCE           DYK_MSG30
+LANG_ENGLISH        "Calmness is essential."
+
+REFERENCE           DYK_MSG31
+LANG_ENGLISH        "Don't try to be Jesus. Sometimes you can save a life, sometimes you just can't..."
+
+REFERENCE           DYK_MSG32
+LANG_ENGLISH        "Teamwork is the key to success."
+
+REFERENCE           DYK_MSG33
+LANG_ENGLISH        "Sometimes it has to be more."
+
+REFERENCE           DYK_MSG34
+LANG_ENGLISH        "Even your knife can kill."
+
+REFERENCE           DYK_MSG35
+LANG_ENGLISH        "Don't steal Care Packages."
+
+REFERENCE           DYK_MSG36
+LANG_ENGLISH        "Drop the hammer and grab your weapon."
+
+ENDMARKER

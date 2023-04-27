@@ -1,0 +1,90 @@
+
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Extracted from fastfile."
+
+REFERENCE           MOTD
+LANG_ENGLISH        "Message of the day"
+
+REFERENCE           MOD_BY_VERSION
+LANG_ENGLISH        "RoZo mod by Mod-Team-Germany\nVersion Beta 0.5.21 ( Sep 2013)"
+
+REFERENCE           RESET_TO_DEFAULT_WARN
+LANG_ENGLISH        "Do you really \nwant to reset your class to default?"
+
+REFERENCE           SURVIVAL_HINT
+LANG_ENGLISH        "Survival Hint"
+
+REFERENCE           SIDEARMS
+LANG_ENGLISH        "Handguns"
+
+REFERENCE           MPISTOLS
+LANG_ENGLISH        "Machine Pistols"
+
+REFERENCE           OTHERS
+LANG_ENGLISH        "Other Weapons"
+
+REFERENCE           AAP
+LANG_ENGLISH        "Advanced Admin Panel"
+
+REFERENCE           AMP
+LANG_ENGLISH        "Advanced VIP/Member Panel"
+
+REFERENCE           KILL_STUCK_ZOMBIES
+LANG_ENGLISH        "Kill all zombies"
+
+REFERENCE           MAP_ROTATE
+LANG_ENGLISH        "Force map end"
+
+REFERENCE           MAP_RESTART
+LANG_ENGLISH        "Restart map"
+
+REFERENCE           MAP_NEWNAME
+LANG_ENGLISH        "Map consolename"
+
+REFERENCE           GAME_CHANGE_NOW
+LANG_ENGLISH        "Change now to map & gametype"
+
+REFERENCE           GAME_CHANGE_NEXT
+LANG_ENGLISH        "Force to be next map & gametype"
+
+REFERENCE           PLAYER_SETTINGS
+LANG_ENGLISH        "Player settings"
+
+REFERENCE           PLAYER_SLAP
+LANG_ENGLISH        "Slap player"
+
+REFERENCE           PLAYER_KILL
+LANG_ENGLISH        "Kill player"
+
+REFERENCE           PLAYER_TAKE_WEAPON
+LANG_ENGLISH        "Take weapon"
+
+REFERENCE           PLAYER_KICK
+LANG_ENGLISH        "Kick player"
+
+REFERENCE           PLAYER_BAN
+LANG_ENGLISH        "Ban player"
+
+REFERENCE           PLAYER_TELE_TO
+LANG_ENGLISH        "Teleport you to player"
+
+REFERENCE           PLAYER_TELE
+LANG_ENGLISH        "Teleport player to you"
+
+REFERENCE           PLAYER_TELE_SP
+LANG_ENGLISH        "Teleport player to spawn"
+
+REFERENCE           PLAYER_TELE_SN
+LANG_ENGLISH        "Unstuck player"
+
+REFERENCE           PLAYER_SET_SPEC
+LANG_ENGLISH        "Move player to spectator"
+
+REFERENCE           PLAYER_RERANK
+LANG_ENGLISH        "Re-Rank player"
+
+REFERENCE           ABOUT_US
+LANG_ENGLISH        "About this mod"
+
+ENDMARKER

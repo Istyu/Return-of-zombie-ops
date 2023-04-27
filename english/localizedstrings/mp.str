@@ -1,0 +1,18 @@
+
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Extracted from fastfile."
+
+REFERENCE           MARINES_NAME
+LANG_ENGLISH        "Humans"
+
+REFERENCE           SPETSNAZ_NAME
+LANG_ENGLISH        "Zombies"
+
+REFERENCE           STREAK_N_IS_READY
+LANG_ENGLISH        "&&1 ready!"
+
+REFERENCE           N_NOT_AVAILABLE
+LANG_ENGLISH        "&&1 not available!"
+
+ENDMARKER

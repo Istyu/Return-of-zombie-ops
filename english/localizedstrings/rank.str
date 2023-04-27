@@ -1,0 +1,915 @@
+
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Extracted from fastfile."
+
+REFERENCE           PFC
+LANG_ENGLISH        "ZoR."
+
+REFERENCE           PFC_FULL
+LANG_ENGLISH        "Zombie Rookie"
+
+REFERENCE           PFC_FULL2
+LANG_ENGLISH        "Zombie Rookie I"
+
+REFERENCE           PFC_FULL3
+LANG_ENGLISH        "Zombie Rookie II"
+
+REFERENCE           PFC_FULL4
+LANG_ENGLISH        "Zombie Rookie III"
+
+REFERENCE           PFC_FULL_N
+LANG_ENGLISH        "Zombie Rookie &&1"
+
+REFERENCE           LCPL
+LANG_ENGLISH        "StH."
+
+REFERENCE           LCPL_FULL
+LANG_ENGLISH        "Stupid Hunter"
+
+REFERENCE           LCPL_FULL2
+LANG_ENGLISH        "Stupid Hunter I"
+
+REFERENCE           LCPL_FULL3
+LANG_ENGLISH        "Stupid Hunter II"
+
+REFERENCE           LCPL_FULL4
+LANG_ENGLISH        "Stupid Hunter III"
+
+REFERENCE           LCPL_FULL_N
+LANG_ENGLISH        "Stupid Hunter &&1"
+
+REFERENCE           CPL
+LANG_ENGLISH        "BoZ."
+
+REFERENCE           CPL_FULL
+LANG_ENGLISH        "Beginner of Zombiekiller"
+
+REFERENCE           CPL_FULL2
+LANG_ENGLISH        "Beginner of Zombiekiller I"
+
+REFERENCE           CPL_FULL3
+LANG_ENGLISH        "Beginner of Zombiekiller II"
+
+REFERENCE           CPL_FULL4
+LANG_ENGLISH        "Beginner of Zombiekiller III"
+
+REFERENCE           CPL_FULL_N
+LANG_ENGLISH        "Beginner of Zombiekiller &&1"
+
+REFERENCE           SGT
+LANG_ENGLISH        "ZoL."
+
+REFERENCE           SGT_FULL
+LANG_ENGLISH        "Zombie Lover"
+
+REFERENCE           SGT_FULL2
+LANG_ENGLISH        "Zombie Lover I"
+
+REFERENCE           SGT_FULL3
+LANG_ENGLISH        "Zombie Lover II"
+
+REFERENCE           SGT_FULL4
+LANG_ENGLISH        "Zombie Lover III"
+
+REFERENCE           SGT_FULL_N
+LANG_ENGLISH        "Zombie Lover &&1"
+
+REFERENCE           SSGT
+LANG_ENGLISH        "BoS."
+
+REFERENCE           SSGT_FULL
+LANG_ENGLISH        "Beginner of Surviver"
+
+REFERENCE           SSGT_FULL2
+LANG_ENGLISH        "Beginner of Surviver I"
+
+REFERENCE           SSGT_FULL3
+LANG_ENGLISH        "Beginner of Surviver II"
+
+REFERENCE           SSGT_FULL4
+LANG_ENGLISH        "Beginner of Surviver III"
+
+REFERENCE           SSGT_FULL_N
+LANG_ENGLISH        "Beginner of Surviver &&1"
+
+REFERENCE           GYSGT
+LANG_ENGLISH        "SoZ."
+
+REFERENCE           GYSGT_FULL
+LANG_ENGLISH        "Survivor of Zombies"
+
+REFERENCE           GYSGT_FULL2
+LANG_ENGLISH        "Survivor of Zombies I"
+
+REFERENCE           GYSGT_FULL3
+LANG_ENGLISH        "Survivor of Zombies II"
+
+REFERENCE           GYSGT_FULL4
+LANG_ENGLISH        "Survivor of Zombies III"
+
+REFERENCE           GYSGT_FULL_N
+LANG_ENGLISH        "Survivor of Zombies &&1"
+
+REFERENCE           MSGT
+LANG_ENGLISH        "ZoG."
+
+REFERENCE           MSGT_FULL
+LANG_ENGLISH        "Zombie Guy"
+
+REFERENCE           MSGT_FULL2
+LANG_ENGLISH        "Zombie Guy I"
+
+REFERENCE           MSGT_FULL3
+LANG_ENGLISH        "Zombie Guy II"
+
+REFERENCE           MSGT_FULL4
+LANG_ENGLISH        "Zombie Guy III"
+
+REFERENCE           MSGT_FULL_N
+LANG_ENGLISH        "Zombie Guy &&1"
+
+REFERENCE           MGYSGT
+LANG_ENGLISH        "ZoB."
+
+REFERENCE           MGYSGT_FULL
+LANG_ENGLISH        "Zombie Butcher"
+
+REFERENCE           MGYSGT_FULL2
+LANG_ENGLISH        "Zombie Butcher I"
+
+REFERENCE           MGYSGT_FULL3
+LANG_ENGLISH        "Zombie Butcher II"
+
+REFERENCE           MGYSGT_FULL4
+LANG_ENGLISH        "Zombie Butcher III"
+
+REFERENCE           MGYSGT_FULL_N
+LANG_ENGLISH        "Zombie Butcher &&1"
+
+REFERENCE           2NDLT
+LANG_ENGLISH        "CSG."
+
+REFERENCE           2NDLT_FULL
+LANG_ENGLISH        "Crazy Survivor Guy"
+
+REFERENCE           2NDLT_FULL2
+LANG_ENGLISH        "Crazy Survivor Guy I"
+
+REFERENCE           2NDLT_FULL3
+LANG_ENGLISH        "Crazy Survivor Guy II"
+
+REFERENCE           2NDLT_FULL4
+LANG_ENGLISH        "Crazy Survivor Guy III"
+
+REFERENCE           2NDLT_FULL_N
+LANG_ENGLISH        "Crazy Survivor Guy &&1"
+
+REFERENCE           1STLT
+LANG_ENGLISH        "CSoZ."
+
+REFERENCE           1STLT_FULL
+LANG_ENGLISH        "Crazy Survivor of Zombies"
+
+REFERENCE           1STLT_FULL2
+LANG_ENGLISH        "Crazy Survivor of Zombies I"
+
+REFERENCE           1STLT_FULL3
+LANG_ENGLISH        "Crazy Survivor of Zombies II"
+
+REFERENCE           1STLT_FULL4
+LANG_ENGLISH        "Crazy Survivor of Zombies III"
+
+REFERENCE           1STLT_FULL_N
+LANG_ENGLISH        "Crazy Survivor of Zombies &&1"
+
+REFERENCE           CAPT
+LANG_ENGLISH        "ZJ."
+
+REFERENCE           CAPT_FULL
+LANG_ENGLISH        "Zombie Junkie"
+
+REFERENCE           CAPT_FULL2
+LANG_ENGLISH        "Zombie Junkie I"
+
+REFERENCE           CAPT_FULL3
+LANG_ENGLISH        "Zombie Junkie II"
+
+REFERENCE           CAPT_FULL4
+LANG_ENGLISH        "Zombie Junkie III"
+
+REFERENCE           CAPT_FULL_N
+LANG_ENGLISH        "Zombie Junkie &&1"
+
+REFERENCE           MAJ
+LANG_ENGLISH        "UZH."
+
+REFERENCE           MAJ_FULL
+LANG_ENGLISH        "Unskilled Zombie Hunter"
+
+REFERENCE           MAJ_FULL2
+LANG_ENGLISH        "Unskilled Zombie Hunter I"
+
+REFERENCE           MAJ_FULL3
+LANG_ENGLISH        "Unskilled Zombie Hunter II"
+
+REFERENCE           MAJ_FULL4
+LANG_ENGLISH        "Unskilled Zombie Hunter III"
+
+REFERENCE           MAJ_FULL_N
+LANG_ENGLISH        "Unskilled Zombie Hunter &&1"
+
+REFERENCE           LTCOL
+LANG_ENGLISH        "TZH."
+
+REFERENCE           LTCOL_FULL
+LANG_ENGLISH        "Trained Zombie Hunter"
+
+REFERENCE           LTCOL_FULL2
+LANG_ENGLISH        "Trained Zombie Hunter I"
+
+REFERENCE           LTCOL_FULL3
+LANG_ENGLISH        "Trained Zombie Hunter II"
+
+REFERENCE           LTCOL_FULL4
+LANG_ENGLISH        "Trained Zombie Hunter III"
+
+REFERENCE           LTCOL_FULL_N
+LANG_ENGLISH        "Trained Zombie Hunter &&1"
+
+REFERENCE           COL
+LANG_ENGLISH        "CuH."
+
+REFERENCE           COL_FULL
+LANG_ENGLISH        "Crazy Hunter"
+
+REFERENCE           COL_FULL2
+LANG_ENGLISH        "Crazy Hunter I"
+
+REFERENCE           COL_FULL3
+LANG_ENGLISH        "Crazy Hunter II"
+
+REFERENCE           COL_FULL4
+LANG_ENGLISH        "Crazy Hunter III"
+
+REFERENCE           COL_FULL_N
+LANG_ENGLISH        "Crazy Hunter &&1"
+
+REFERENCE           BGEN
+LANG_ENGLISH        "HZH."
+
+REFERENCE           BGEN_FULL
+LANG_ENGLISH        "Horny Zombie Hunter"
+
+REFERENCE           BGEN_FULL2
+LANG_ENGLISH        "Horny Zombie Hunter I"
+
+REFERENCE           BGEN_FULL3
+LANG_ENGLISH        "Horny Zombie Hunter II"
+
+REFERENCE           BGEN_FULL4
+LANG_ENGLISH        "Horny Zombie Hunter III"
+
+REFERENCE           BGEN_FULL_N
+LANG_ENGLISH        "Horny Zombie Hunter &&1"
+
+REFERENCE           MAJGEN
+LANG_ENGLISH        "ZoS."
+
+REFERENCE           MAJGEN_FULL
+LANG_ENGLISH        "Zombie Survivor"
+
+REFERENCE           MAJGEN_FULL2
+LANG_ENGLISH        "Zombie Survivor I"
+
+REFERENCE           MAJGEN_FULL3
+LANG_ENGLISH        "Zombie Survivor II"
+
+REFERENCE           MAJGEN_FULL4
+LANG_ENGLISH        "Zombie Survivor III"
+
+REFERENCE           MAJGEN_FULL_N
+LANG_ENGLISH        "Zombie Survivor &&1"
+
+REFERENCE           LTGEN
+LANG_ENGLISH        "BrH."
+
+REFERENCE           LTGEN_FULL
+LANG_ENGLISH        "Brain Hunter"
+
+REFERENCE           LTGEN_FULL2
+LANG_ENGLISH        "Brain Hunter I"
+
+REFERENCE           LTGEN_FULL3
+LANG_ENGLISH        "Brain Hunter II"
+
+REFERENCE           LTGEN_FULL4
+LANG_ENGLISH        "Brain Hunter III"
+
+REFERENCE           LTGEN_FULL_N
+LANG_ENGLISH        "Brain Hunter &&1"
+
+REFERENCE           GEN
+LANG_ENGLISH        "BrS."
+
+REFERENCE           GEN_FULL
+LANG_ENGLISH        "Brain Slimer"
+
+REFERENCE           GEN_FULL2
+LANG_ENGLISH        "Brain Slimer I"
+
+REFERENCE           GEN_FULL3
+LANG_ENGLISH        "Brain Slimer II"
+
+REFERENCE           GEN_FULL4
+LANG_ENGLISH        "Brain Slimer III"
+
+REFERENCE           GEN_FULL_N
+LANG_ENGLISH        "Brain Slimer &&1"
+
+REFERENCE           COMM
+LANG_ENGLISH        "CC."
+
+REFERENCE           COMM_FULL
+LANG_ENGLISH        "Crazy Crazy"
+
+REFERENCE           COMM_FULL2
+LANG_ENGLISH        "Crazy Crazy I"
+
+REFERENCE           COMM_FULL3
+LANG_ENGLISH        "Crazy Crazy II"
+
+REFERENCE           COMM_FULL4
+LANG_ENGLISH        "Crazy Crazy III"
+
+REFERENCE           COMM_FULL_N
+LANG_ENGLISH        "Crazy Crazy &&1"
+
+REFERENCE           PRESTIGE1
+LANG_ENGLISH        "BrE."
+
+REFERENCE           PRESTIGE1_FULL
+LANG_ENGLISH        "Brain Eater"
+
+REFERENCE           PRESTIGE1_FULL2
+LANG_ENGLISH        "Brain Eater I"
+
+REFERENCE           PRESTIGE1_FULL3
+LANG_ENGLISH        "Brain Eater II"
+
+REFERENCE           PRESTIGE1_FULL4
+LANG_ENGLISH        "Brain Eater III"
+
+REFERENCE           PRESTIGE1_FULL_N
+LANG_ENGLISH        "Brain Eater &&1"
+
+REFERENCE           PRESTIGE2
+LANG_ENGLISH        "HeB."
+
+REFERENCE           PRESTIGE2_FULL
+LANG_ENGLISH        "Head Breaker"
+
+REFERENCE           PRESTIGE2_FULL2
+LANG_ENGLISH        "Head Breaker I"
+
+REFERENCE           PRESTIGE2_FULL3
+LANG_ENGLISH        "Head Breaker II"
+
+REFERENCE           PRESTIGE2_FULL4
+LANG_ENGLISH        "Head Breaker III"
+
+REFERENCE           PRESTIGE2_FULL_N
+LANG_ENGLISH        "Head Breaker &&1"
+
+REFERENCE           PRESTIGE3
+LANG_ENGLISH        "ZoC."
+
+REFERENCE           PRESTIGE3_FULL
+LANG_ENGLISH        "Zombie Chicken"
+
+REFERENCE           PRESTIGE3_FULL2
+LANG_ENGLISH        "Zombie Chicken I"
+
+REFERENCE           PRESTIGE3_FULL3
+LANG_ENGLISH        "Zombie Chicken II"
+
+REFERENCE           PRESTIGE3_FULL4
+LANG_ENGLISH        "Zombie Chicken III"
+
+REFERENCE           PRESTIGE3_FULL_N
+LANG_ENGLISH        "Zombie Chicken &&1"
+
+REFERENCE           PRESTIGE4
+LANG_ENGLISH        "BrHu."
+
+REFERENCE           PRESTIGE4_FULL
+LANG_ENGLISH        "Brainless Hunter"
+
+REFERENCE           PRESTIGE4_FULL2
+LANG_ENGLISH        "Brainless Hunter I"
+
+REFERENCE           PRESTIGE4_FULL3
+LANG_ENGLISH        "Brainless Hunter II"
+
+REFERENCE           PRESTIGE4_FULL4
+LANG_ENGLISH        "Brainless Hunter III"
+
+REFERENCE           PRESTIGE4_FULL_N
+LANG_ENGLISH        "Brainless Hunter &&1"
+
+REFERENCE           PRESTIGE5
+LANG_ENGLISH        "SkeHe."
+
+REFERENCE           PRESTIGE5_FULL
+LANG_ENGLISH        "Skeleton Headhunter"
+
+REFERENCE           PRESTIGE5_FULL2
+LANG_ENGLISH        "Skeleton Headhunter I"
+
+REFERENCE           PRESTIGE5_FULL3
+LANG_ENGLISH        "Skeleton Headhunter II"
+
+REFERENCE           PRESTIGE5_FULL4
+LANG_ENGLISH        "Skeleton Headhunter III"
+
+REFERENCE           PRESTIGE5_FULL_N
+LANG_ENGLISH        "Skeleton Headhunter &&1"
+
+REFERENCE           PRESTIGE6
+LANG_ENGLISH        "VotZ."
+
+REFERENCE           PRESTIGE6_FULL
+LANG_ENGLISH        "Visor of the Zombies"
+
+REFERENCE           PRESTIGE6_FULL2
+LANG_ENGLISH        "Visor of the Zombies I"
+
+REFERENCE           PRESTIGE6_FULL3
+LANG_ENGLISH        "Visor of the Zombies II"
+
+REFERENCE           PRESTIGE6_FULL4
+LANG_ENGLISH        "Visor of the Zombies III"
+
+REFERENCE           PRESTIGE6_FULL_N
+LANG_ENGLISH        "Visor of the Zombies &&1"
+
+REFERENCE           PRESTIGE7
+LANG_ENGLISH        "LeHu."
+
+REFERENCE           PRESTIGE7_FULL
+LANG_ENGLISH        "Legless Hunter"
+
+REFERENCE           PRESTIGE7_FULL2
+LANG_ENGLISH        "Legless Hunter I"
+
+REFERENCE           PRESTIGE7_FULL3
+LANG_ENGLISH        "Legless Hunter II"
+
+REFERENCE           PRESTIGE7_FULL4
+LANG_ENGLISH        "Legless Hunter III"
+
+REFERENCE           PRESTIGE7_FULL_N
+LANG_ENGLISH        "Legless Hunter &&1"
+
+REFERENCE           PRESTIGE8
+LANG_ENGLISH        "HuZoHU."
+
+REFERENCE           PRESTIGE8_FULL
+LANG_ENGLISH        "Hunted Zombie Hunter"
+
+REFERENCE           PRESTIGE8_FULL2
+LANG_ENGLISH        "Hunted Zombie Hunter I"
+
+REFERENCE           PRESTIGE8_FULL3
+LANG_ENGLISH        "Hunted Zombie Hunter II"
+
+REFERENCE           PRESTIGE8_FULL4
+LANG_ENGLISH        "Hunted Zombie Hunter III"
+
+REFERENCE           PRESTIGE8_FULL_N
+LANG_ENGLISH        "Hunted Zombie Hunter &&1"
+
+REFERENCE           PRESTIGE9
+LANG_ENGLISH        "ZoLi."
+
+REFERENCE           PRESTIGE9_FULL
+LANG_ENGLISH        "Zombie Lite"
+
+REFERENCE           PRESTIGE9_FULL2
+LANG_ENGLISH        "Zombie Lite I"
+
+REFERENCE           PRESTIGE9_FULL3
+LANG_ENGLISH        "Zombie Lite II"
+
+REFERENCE           PRESTIGE9_FULL4
+LANG_ENGLISH        "Zombie Lite III"
+
+REFERENCE           PRESTIGE9_FULL_N
+LANG_ENGLISH        "Zombie Lite &&1"
+
+REFERENCE           PRESTIGE10
+LANG_ENGLISH        "ZoCr."
+
+REFERENCE           PRESTIGE10_FULL
+LANG_ENGLISH        "Zombies Crossing"
+
+REFERENCE           PRESTIGE10_FULL2
+LANG_ENGLISH        "Zombies Crossing I"
+
+REFERENCE           PRESTIGE10_FULL3
+LANG_ENGLISH        "Zombies Crossing II"
+
+REFERENCE           PRESTIGE10_FULL4
+LANG_ENGLISH        "Zombies Crossing III"
+
+REFERENCE           PRESTIGE10_FULL_N
+LANG_ENGLISH        "Zombies Crossing &&1"
+
+REFERENCE           CAPTAIN
+LANG_ENGLISH        "SaZo."
+
+REFERENCE           CAPTAIN_FULL
+LANG_ENGLISH        "Sad Zombies"
+
+REFERENCE           CAPTAIN_FULL2
+LANG_ENGLISH        "Sad Zombies I"
+
+REFERENCE           CAPTAIN_FULL3
+LANG_ENGLISH        "Sad Zombies II"
+
+REFERENCE           CAPTAIN_FULL4
+LANG_ENGLISH        "Sad Zombies III"
+
+REFERENCE           CAPTAIN_FULL_N
+LANG_ENGLISH        "Sad Zombies &&1"
+
+REFERENCE           COLONEL
+LANG_ENGLISH        "BlHu."
+
+REFERENCE           COLONEL_FULL
+LANG_ENGLISH        "Blind Hunter"
+
+REFERENCE           COLONEL_FULL2
+LANG_ENGLISH        "Blind Hunter I"
+
+REFERENCE           COLONEL_FULL3
+LANG_ENGLISH        "Blind Hunter II"
+
+REFERENCE           COLONEL_FULL4
+LANG_ENGLISH        "Blind Hunter III"
+
+REFERENCE           COLONEL_FULL_N
+LANG_ENGLISH        "Blind Hunter &&1"
+
+REFERENCE           CORPORAL
+LANG_ENGLISH        "ChZo."
+
+REFERENCE           CORPORAL_FULL
+LANG_ENGLISH        "Chinese Zombie"
+
+REFERENCE           CORPORAL_FULL2
+LANG_ENGLISH        "Chinese Zombie I"
+
+REFERENCE           CORPORAL_FULL3
+LANG_ENGLISH        "Chinese Zombie II"
+
+REFERENCE           CORPORAL_FULL4
+LANG_ENGLISH        "Chinese Zombie III"
+
+REFERENCE           CORPORAL_FULL_N
+LANG_ENGLISH        "Chinese Zombie &&1"
+
+REFERENCE           GENERAL
+LANG_ENGLISH        "InHu."
+
+REFERENCE           GENERAL_FULL
+LANG_ENGLISH        "Infected Hunter"
+
+REFERENCE           GENERAL_FULL2
+LANG_ENGLISH        "Infected Hunter I"
+
+REFERENCE           GENERAL_FULL3
+LANG_ENGLISH        "Infected Hunter II"
+
+REFERENCE           GENERAL_FULL4
+LANG_ENGLISH        "Infected Hunter III"
+
+REFERENCE           GENERAL_FULL_N
+LANG_ENGLISH        "Infected Hunter &&1"
+
+REFERENCE           LIEUTENANT
+LANG_ENGLISH        "HeZo."
+
+REFERENCE           LIEUTENANT_FULL
+LANG_ENGLISH        "Hells Zombies"
+
+REFERENCE           LIEUTENANT_FULL2
+LANG_ENGLISH        "Hells Zombies I"
+
+REFERENCE           LIEUTENANT_FULL3
+LANG_ENGLISH        "Hells Zombies II"
+
+REFERENCE           LIEUTENANT_FULL4
+LANG_ENGLISH        "Hells Zombies III"
+
+REFERENCE           LIEUTENANT_FULL_N
+LANG_ENGLISH        "Hells Zombies &&1"
+
+REFERENCE           MAJOR
+LANG_ENGLISH        "DaZo."
+
+REFERENCE           MAJOR_FULL
+LANG_ENGLISH        "Dangerous Zombies"
+
+REFERENCE           MAJOR_FULL2
+LANG_ENGLISH        "Dangerous Zombies I"
+
+REFERENCE           MAJOR_FULL3
+LANG_ENGLISH        "Dangerous Zombies II"
+
+REFERENCE           MAJOR_FULL4
+LANG_ENGLISH        "Dangerous Zombies III"
+
+REFERENCE           MAJOR_FULL_N
+LANG_ENGLISH        "Dangerous Zombies &&1"
+
+REFERENCE           PRIVATE
+LANG_ENGLISH        "BiMaZo."
+
+REFERENCE           PRIVATE_FULL
+LANG_ENGLISH        "Big Madness Zombie"
+
+REFERENCE           PRIVATE_FULL2
+LANG_ENGLISH        "Big Madness Zombie I"
+
+REFERENCE           PRIVATE_FULL3
+LANG_ENGLISH        "Big Madness Zombie II"
+
+REFERENCE           PRIVATE_FULL4
+LANG_ENGLISH        "Big Madness Zombie III"
+
+REFERENCE           PRIVATE_FULL_N
+LANG_ENGLISH        "Big Madness Zombie &&1"
+
+REFERENCE           SERGEANT
+LANG_ENGLISH        "ZoSe."
+
+REFERENCE           SERGEANT_FULL
+LANG_ENGLISH        "Zombie Security"
+
+REFERENCE           SERGEANT_FULL2
+LANG_ENGLISH        "Zombie Security I"
+
+REFERENCE           SERGEANT_FULL3
+LANG_ENGLISH        "Zombie Security II"
+
+REFERENCE           SERGEANT_FULL4
+LANG_ENGLISH        "Zombie Security III"
+
+REFERENCE           SERGEANT_FULL_N
+LANG_ENGLISH        "Zombie Security &&1"
+
+REFERENCE           BAD
+LANG_ENGLISH        "BaZoHu."
+
+REFERENCE           BAD_FULL
+LANG_ENGLISH        "Bad Zombie Hunter"
+
+REFERENCE           BAD_FULL2
+LANG_ENGLISH        "Bad Zombie Hunter I"
+
+REFERENCE           BAD_FULL3
+LANG_ENGLISH        "Bad Zombie Hunter II"
+
+REFERENCE           BAD_FULL4
+LANG_ENGLISH        "Bad Zombie Hunter III"
+
+REFERENCE           BAD_FULL_N
+LANG_ENGLISH        "Bad Zombie Hunter &&1"
+
+REFERENCE           KING
+LANG_ENGLISH        "KoZo."
+
+REFERENCE           KING_FULL
+LANG_ENGLISH        "King of Zombie"
+
+REFERENCE           KING_FULL2
+LANG_ENGLISH        "King of Zombie I"
+
+REFERENCE           KING_FULL3
+LANG_ENGLISH        "King of Zombie II"
+
+REFERENCE           KING_FULL4
+LANG_ENGLISH        "King of Zombie III"
+
+REFERENCE           KING_FULL_N
+LANG_ENGLISH        "King of Zombie &&1"
+
+REFERENCE           DEATH
+LANG_ENGLISH        "DeZo."
+
+REFERENCE           DEATH_FULL
+LANG_ENGLISH        "Death Zombie"
+
+REFERENCE           DEATH_FULL2
+LANG_ENGLISH        "Death Zombie I"
+
+REFERENCE           DEATH_FULL3
+LANG_ENGLISH        "Death Zombie II"
+
+REFERENCE           DEATH_FULL4
+LANG_ENGLISH        "Death Zombie III"
+
+REFERENCE           DEATH_FULL_N
+LANG_ENGLISH        "Death Zombie &&1"
+
+REFERENCE           MONSTER
+LANG_ENGLISH        "MoHu."
+
+REFERENCE           MONSTER_FULL
+LANG_ENGLISH        "Monster Hunter"
+
+REFERENCE           MONSTER_FULL2
+LANG_ENGLISH        "Monster Hunter I"
+
+REFERENCE           MONSTER_FULL3
+LANG_ENGLISH        "Monster Hunter II"
+
+REFERENCE           MONSTER_FULL4
+LANG_ENGLISH        "Monster Hunter III"
+
+REFERENCE           MONSTER_FULL_N
+LANG_ENGLISH        "Monster Hunter &&1"
+
+REFERENCE           HANNIBAL
+LANG_ENGLISH        "HaLe."
+
+REFERENCE           HANNIBAL_FULL
+LANG_ENGLISH        "Hannibal Lecter"
+
+REFERENCE           HANNIBAL_FULL2
+LANG_ENGLISH        "Hannibal Lecter I"
+
+REFERENCE           HANNIBAL_FULL3
+LANG_ENGLISH        "Hannibal Lecter II"
+
+REFERENCE           HANNIBAL_FULL4
+LANG_ENGLISH        "Hannibal Lecter III"
+
+REFERENCE           HANNIBAL_FULL_N
+LANG_ENGLISH        "Hannibal Lecter &&1"
+
+REFERENCE           VOODOO
+LANG_ENGLISH        "VoHu."
+
+REFERENCE           VOODOO_FULL
+LANG_ENGLISH        "Voodoo Hunter"
+
+REFERENCE           VOODOO_FULL2
+LANG_ENGLISH        "Voodoo Hunter I"
+
+REFERENCE           VOODOO_FULL3
+LANG_ENGLISH        "Voodoo Hunter II"
+
+REFERENCE           VOODOO_FULL4
+LANG_ENGLISH        "Voodoo Hunter III"
+
+REFERENCE           VOODOO_FULL_N
+LANG_ENGLISH        "Voodoo Hunter &&1"
+
+REFERENCE           SOLDIER
+LANG_ENGLISH        "DeSo."
+
+REFERENCE           SOLDIER_FULL
+LANG_ENGLISH        "Death Soldier"
+
+REFERENCE           SOLDIER_FULL2
+LANG_ENGLISH        "Death Soldier I"
+
+REFERENCE           SOLDIER_FULL3
+LANG_ENGLISH        "Death Soldier II"
+
+REFERENCE           SOLDIER_FULL4
+LANG_ENGLISH        "Death Soldier III"
+
+REFERENCE           SOLDIER_FULL_N
+LANG_ENGLISH        "Death Soldier &&1"
+
+REFERENCE           BURNER
+LANG_ENGLISH        "ZoBu."
+
+REFERENCE           BURNER_FULL
+LANG_ENGLISH        "Zombie Burner"
+
+REFERENCE           BURNER_FULL2
+LANG_ENGLISH        "Zombie Burner I"
+
+REFERENCE           BURNER_FULL3
+LANG_ENGLISH        "Zombie Burner II"
+
+REFERENCE           BURNER_FULL4
+LANG_ENGLISH        "Zombie Burner III"
+
+REFERENCE           BURNER_FULL_N
+LANG_ENGLISH        "Zombie Burner &&1"
+
+REFERENCE           COWBOY
+LANG_ENGLISH        "ZoCo."
+
+REFERENCE           COWBOY_FULL
+LANG_ENGLISH        "Zombie Cowboy"
+
+REFERENCE           COWBOY_FULL2
+LANG_ENGLISH        "Zombie Cowboy I"
+
+REFERENCE           COWBOY_FULL3
+LANG_ENGLISH        "Zombie Cowboy II"
+
+REFERENCE           COWBOY_FULL4
+LANG_ENGLISH        "Zombie Cowboy III"
+
+REFERENCE           COWBOY_FULL_N
+LANG_ENGLISH        "Zombie Cowboy &&1"
+
+REFERENCE           REAPER
+LANG_ENGLISH        "GrRe."
+
+REFERENCE           REAPER_FULL
+LANG_ENGLISH        "Grim Reaper"
+
+REFERENCE           REAPER_FULL2
+LANG_ENGLISH        "Grim Reaper I"
+
+REFERENCE           REAPER_FULL3
+LANG_ENGLISH        "Grim Reaper II"
+
+REFERENCE           REAPER_FULL4
+LANG_ENGLISH        "Grim Reaper III"
+
+REFERENCE           REAPER_FULL_N
+LANG_ENGLISH        "Grim Reaper &&1"
+
+REFERENCE           EXPERT
+LANG_ENGLISH        "SuEx."
+
+REFERENCE           EXPERT_FULL
+LANG_ENGLISH        "Survival Expert"
+
+REFERENCE           EXPERT_FULL2
+LANG_ENGLISH        "Survival Expert I"
+
+REFERENCE           EXPERT_FULL3
+LANG_ENGLISH        "Survival Expert II"
+
+REFERENCE           EXPERT_FULL4
+LANG_ENGLISH        "Survival Expert III"
+
+REFERENCE           EXPERT_FULL_N
+LANG_ENGLISH        "Survival Expert &&1"
+
+REFERENCE           MASTER
+LANG_ENGLISH        "MofZo."
+
+REFERENCE           MASTER_FULL
+LANG_ENGLISH        "Master of Zombiekiller"
+
+REFERENCE           MASTER_FULL2
+LANG_ENGLISH        "Master of Zombiekiller I"
+
+REFERENCE           MASTER_FULL3
+LANG_ENGLISH        "Master of Zombiekiller II"
+
+REFERENCE           MASTER_FULL4
+LANG_ENGLISH        "Master of Zombiekiller III"
+
+REFERENCE           MASTER_FULL_N
+LANG_ENGLISH        "Master of Zombiekiller &&1"
+
+REFERENCE           GOD
+LANG_ENGLISH        "GofZo."
+
+REFERENCE           GOD_FULL
+LANG_ENGLISH        "God of Zombiekiller"
+
+REFERENCE           GOD_FULL2
+LANG_ENGLISH        "God of Zombiekiller I"
+
+REFERENCE           GOD_FULL3
+LANG_ENGLISH        "God of Zombiekiller II"
+
+REFERENCE           GOD_FULL4
+LANG_ENGLISH        "God of Zombiekiller III"
+
+REFERENCE           GOD_FULL_N
+LANG_ENGLISH        "God of Zombiekiller &&1"
+
+REFERENCE           ROMANI
+LANG_ENGLISH        "I"
+
+REFERENCE           ROMANII
+LANG_ENGLISH        "II"
+
+REFERENCE           ROMANIII
+LANG_ENGLISH        "III"
+
+ENDMARKER

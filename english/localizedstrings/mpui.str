@@ -1,0 +1,108 @@
+
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Extracted from fastfile."
+
+REFERENCE           PLAYER_INFORM
+LANG_ENGLISH        "Player informations"
+
+REFERENCE           SURV
+LANG_ENGLISH        "Survival"
+
+REFERENCE           ARENA
+LANG_ENGLISH        "Arena"
+
+REFERENCE           NEXT_MAP
+LANG_ENGLISH        "Next map will be: &&1 [&&2]"
+
+REFERENCE           PATTACHMENT
+LANG_ENGLISH        "Primary Attachment"
+
+REFERENCE           SATTACHMENT
+LANG_ENGLISH        "Secondary Attachment"
+
+REFERENCE           CAMO
+LANG_ENGLISH        "Camouflage"
+
+REFERENCE           CHARACTER_MODEL
+LANG_ENGLISH        "Character Customization"
+
+REFERENCE           SPAWN
+LANG_ENGLISH        "Join the massacre"
+
+REFERENCE           OPEN_CLASS
+LANG_ENGLISH        "Edit Loadout"
+
+REFERENCE           ARMOR
+LANG_ENGLISH        "Armor"
+
+REFERENCE           MEDIKIT
+LANG_ENGLISH        "First Aid Kit"
+
+REFERENCE           EQUIPMENT
+LANG_ENGLISH        "Equipment"
+
+REFERENCE           MARINES_SHORT
+LANG_ENGLISH        "Humans"
+
+REFERENCE           SPETSNAZ_SHORT
+LANG_ENGLISH        "Zombies"
+
+REFERENCE           ITEM_BOUGHT
+LANG_ENGLISH        "Item bought."
+
+REFERENCE           BOUGHT_N
+LANG_ENGLISH        "&&1 bought."
+
+REFERENCE           NOT_ENOUGH_MONEY_TO_BUY
+LANG_ENGLISH        "Not enough $ to buy."
+
+REFERENCE           PRESS_USE_TO_BUY_WEAPON
+LANG_ENGLISH        "Press ^3[USE]^7 to buy &&1 [Cost: &&2]"
+
+REFERENCE           PRESS_USE_TO_BUY_WEAPON2
+LANG_ENGLISH        "Press ^3[USE]^7 Weapon[&&1], Ammo[&&2]"
+
+REFERENCE           PRESS_USE_TO_BUY_WEAPON3
+LANG_ENGLISH        "Press ^3[{+activate}]^7 to buy Weapon[&&1]"
+
+REFERENCE           PRESS_USE_TO_BUY_WEAPONS
+LANG_ENGLISH        "Press ^3[USE]^7 to buy Weapons."
+
+REFERENCE           PRESS_USE_TO_BUY_UPGRADES
+LANG_ENGLISH        "Press ^3[USE]^7 to buy Upgrades."
+
+REFERENCE           PRESS_USE_TO_ROLL_WEAPON
+LANG_ENGLISH        "Press ^3[USE]^7 to roll Weapon[&&1]"
+
+REFERENCE           PRESS_USE_TO_BUY_PERK_N
+LANG_ENGLISH        "Press ^3[{+activate}]^7 to buy &&1."
+
+REFERENCE           PRESS_USE_TO_BUY_PERK_N_CN
+LANG_ENGLISH        "Press ^3[USE]^7 to buy &&1 [&&2]"
+
+REFERENCE           WB_TIME
+LANG_ENGLISH        "Time: &&1"
+
+REFERENCE           WB_WAVE
+LANG_ENGLISH        "Wave: &&1"
+
+REFERENCE           WB_KNIFE
+LANG_ENGLISH        "Knifekills: &&1"
+
+REFERENCE           WB_HEAD
+LANG_ENGLISH        "Headshots: &&1"
+
+REFERENCE           WB_FRAG
+LANG_ENGLISH        "Grenade kills: &&1"
+
+REFERENCE           WB_SIDE
+LANG_ENGLISH        "Sidearm kills: &&1"
+
+REFERENCE           ROUNDS
+LANG_ENGLISH        "Rounds : "
+
+REFERENCE           CHOOSE
+LANG_ENGLISH        "CHOOSE"
+
+ENDMARKER

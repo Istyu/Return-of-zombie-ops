@@ -1,0 +1,75 @@
+
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Extracted from fastfile."
+
+REFERENCE           QUICK_MESSAGE
+LANG_ENGLISH        "Quick Menu"
+
+REFERENCE           4_PLAYER
+LANG_ENGLISH        "4. Player Menu"
+
+REFERENCE           5_MEMBER
+LANG_ENGLISH        "5. VIP - Member Menu"
+
+REFERENCE           6_ADMIN
+LANG_ENGLISH        "6. Admin Menu"
+
+REFERENCE           7_WEAPONUPGRADE
+LANG_ENGLISH        "7. Upgrade Weapon"
+
+REFERENCE           8_AMMO
+LANG_ENGLISH        "8. Refill Ammo"
+
+REFERENCE           PLAYER_MENU
+LANG_ENGLISH        "Player Menu"
+
+REFERENCE           1_FLASHLIGHT
+LANG_ENGLISH        "1. Toggle Flashlight"
+
+REFERENCE           2_THIRDPERSON
+LANG_ENGLISH        "2. Toggle Thirdperson"
+
+REFERENCE           3_RADIO_STOP
+LANG_ENGLISH        "3. Radio - Play/Stop"
+
+REFERENCE           4_RADIO_SHUFFLE
+LANG_ENGLISH        "4. Radio - Shuffle"
+
+REFERENCE           5_RADIO_LOOP
+LANG_ENGLISH        "5. Radio - Loop Song"
+
+REFERENCE           6_RADIO_NEXT
+LANG_ENGLISH        "6. Radio - Next Song"
+
+REFERENCE           7_RADIO_PREV
+LANG_ENGLISH        "7. Radio - Previous Song"
+
+REFERENCE           8_SETAFK
+LANG_ENGLISH        "8. AFK Mode"
+
+REFERENCE           WEAPON_UPGRADES
+LANG_ENGLISH        "Upgrade Weapon"
+
+REFERENCE           1_REMOVEALL
+LANG_ENGLISH        "1. Remove Attachments"
+
+REFERENCE           2_REFLEX_SIGHT
+LANG_ENGLISH        "2. Reflex Sight [750]"
+
+REFERENCE           3_ACOG_SIGHT
+LANG_ENGLISH        "3. ACOG Sight [1250]"
+
+REFERENCE           4_SILENCER
+LANG_ENGLISH        "4. Suppressor [1000]"
+
+REFERENCE           5_GRIP
+LANG_ENGLISH        "5. Grip [1250]"
+
+REFERENCE           6_GRENADELAUNCHER
+LANG_ENGLISH        "6. GL [1500]"
+
+REFERENCE           7_EXPLOSIVE
+LANG_ENGLISH        "7. Explosive [1500]"
+
+ENDMARKER

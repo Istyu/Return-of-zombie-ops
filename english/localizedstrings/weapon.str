@@ -1,0 +1,186 @@
+
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Extracted from fastfile."
+
+REFERENCE           BERETTA
+LANG_ENGLISH        "Beretta M92"
+
+REFERENCE           USP
+LANG_ENGLISH        "HK USP"
+
+REFERENCE           COLT1911
+LANG_ENGLISH        "M1911"
+
+REFERENCE           PYTHON
+LANG_ENGLISH        "Colt Python"
+
+REFERENCE           PYTHON_HS
+LANG_ENGLISH        "Colt Python Scope"
+
+REFERENCE           DESERTEAGLETAC
+LANG_ENGLISH        "Desert Eagle Tactical"
+
+REFERENCE           GLOCK18
+LANG_ENGLISH        "Glock 18"
+
+REFERENCE           M93R
+LANG_ENGLISH        "Beretta M93R"
+
+REFERENCE           MP5K
+LANG_ENGLISH        "HK MP5k"
+
+REFERENCE           MP5KSD
+LANG_ENGLISH        "HK MP5kSD / Reflex Sight"
+
+REFERENCE           MP5
+LANG_ENGLISH        "HK MP5"
+
+REFERENCE           UMP
+LANG_ENGLISH        "HK UMP"
+
+REFERENCE           VECTOR
+LANG_ENGLISH        "Kriss Vector"
+
+REFERENCE           P90
+LANG_ENGLISH        "FN P90"
+
+REFERENCE           M4CQBR
+LANG_ENGLISH        "M4 CQBR"
+
+REFERENCE           KS23
+LANG_ENGLISH        "KS-23"
+
+REFERENCE           BENELLI
+LANG_ENGLISH        "M1014"
+
+REFERENCE           AA12
+LANG_ENGLISH        "AA-12"
+
+REFERENCE           HS10
+LANG_ENGLISH        "HS-10"
+
+REFERENCE           SAIGA12
+LANG_ENGLISH        "HS-10"
+
+REFERENCE           BARRETT
+LANG_ENGLISH        "Barrett M82"
+
+REFERENCE           TAC50
+LANG_ENGLISH        "McMillan TAC-50"
+
+REFERENCE           TRG42
+LANG_ENGLISH        "Sako TRG-42"
+
+REFERENCE           SAW
+LANG_ENGLISH        "M249 SAW"
+
+REFERENCE           STONER
+LANG_ENGLISH        "Stoner63"
+
+REFERENCE           M16
+LANG_ENGLISH        "M16A4"
+
+REFERENCE           AUG
+LANG_ENGLISH        "AUG"
+
+REFERENCE           SCAR
+LANG_ENGLISH        "SCAR-H"
+
+REFERENCE           M4A1
+LANG_ENGLISH        "M4A1"
+
+REFERENCE           FAMAS
+LANG_ENGLISH        "Famas"
+
+REFERENCE           G3
+LANG_ENGLISH        "HK G3"
+
+REFERENCE           G36C
+LANG_ENGLISH        "HK G36C"
+
+REFERENCE           ACR
+LANG_ENGLISH        "ACR"
+
+REFERENCE           FAD
+LANG_ENGLISH        "FAD"
+
+REFERENCE           TYPE95
+LANG_ENGLISH        "Type-95"
+
+REFERENCE           MODE_REFLEX
+LANG_ENGLISH        "Reflex Sight"
+
+REFERENCE           MODE_RED_DOT
+LANG_ENGLISH        "Red Dot Sight"
+
+REFERENCE           MODE_EOTECH
+LANG_ENGLISH        "EoTech Sight"
+
+REFERENCE           MODE_SILENCER
+LANG_ENGLISH        "Suppressor"
+
+REFERENCE           MODE_EXPLOSIVE
+LANG_ENGLISH        "Explosive"
+
+REFERENCE           MODE_SHORT
+LANG_ENGLISH        "SBR"
+
+REFERENCE           MODE_SOPMOD
+LANG_ENGLISH        "SOPMOD"
+
+REFERENCE           MODE_SCOPE
+LANG_ENGLISH        "Scoped"
+
+REFERENCE           MODE_GRIP
+LANG_ENGLISH        "Grip"
+
+REFERENCE           MODE_ACOG
+LANG_ENGLISH        "ACOG"
+
+REFERENCE           MODE_CMAG
+LANG_ENGLISH        "Beta C-Mag"
+
+REFERENCE           MODE_DRUMMAG
+LANG_ENGLISH        "Drum Magazine"
+
+REFERENCE           STICKY_GRENADE
+LANG_ENGLISH        "Semtex"
+
+REFERENCE           FLAMETHROWER
+LANG_ENGLISH        "Flamethrower"
+
+REFERENCE           MINIGUN
+LANG_ENGLISH        "Death Machine"
+
+REFERENCE           KNIFE
+LANG_ENGLISH        "Knife"
+
+REFERENCE           BALLISTIC_KNIFE
+LANG_ENGLISH        "Ballistic Knife"
+
+REFERENCE           EXPLOSION
+LANG_ENGLISH        "Explosive Device"
+
+REFERENCE           CROSSBOW
+LANG_ENGLISH        "Crossbow"
+
+REFERENCE           EX41
+LANG_ENGLISH        "EX-41"
+
+REFERENCE           REMOTE_BOMB
+LANG_ENGLISH        "Remote TNT"
+
+REFERENCE           BBETTY
+LANG_ENGLISH        "Bouncing Betty"
+
+REFERENCE           TESLA
+LANG_ENGLISH        "Wunderwaffe DG-2"
+
+REFERENCE           RAYGUN
+LANG_ENGLISH        "Raygun"
+
+REFERENCE           TURRET
+LANG_ENGLISH        "Mounted MG"
+
+ENDMARKER

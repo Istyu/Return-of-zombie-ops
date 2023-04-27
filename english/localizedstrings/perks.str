@@ -1,0 +1,516 @@
+
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Extracted from fastfile."
+
+REFERENCE           LIGHTWEIGHT
+LANG_ENGLISH        "Lightweight"
+
+REFERENCE           SCAVENGER
+LANG_ENGLISH        "Scavenger"
+
+REFERENCE           GHOST
+LANG_ENGLISH        "Ghost"
+
+REFERENCE           JUGGERNAUT
+LANG_ENGLISH        "Flak Jacket"
+
+REFERENCE           HARDLINE
+LANG_ENGLISH        "Hardline"
+
+REFERENCE           PREDATOR
+LANG_ENGLISH        "Predator"
+
+REFERENCE           DEEP_IMPACT
+LANG_ENGLISH        "Hardened"
+
+REFERENCE           SCOUT
+LANG_ENGLISH        "Scout"
+
+REFERENCE           WARLORD
+LANG_ENGLISH        "Warlord"
+
+REFERENCE           DEAD_SILENCE
+LANG_ENGLISH        "Ninja"
+
+REFERENCE           LAST_STAND
+LANG_ENGLISH        "Second Chance"
+
+REFERENCE           HACKER
+LANG_ENGLISH        "Hacker"
+
+REFERENCE           TAKTICAL_MASK
+LANG_ENGLISH        "Taktical Mask"
+
+REFERENCE           INCREASED_MOVEMENTSPEED
+LANG_ENGLISH        "Move faster."
+
+REFERENCE           REGAIN_AMMO_FROM_BODIES
+LANG_ENGLISH        "Resupply from dead enemies."
+
+REFERENCE           UNDETECTABLE_ON_ENEMY
+LANG_ENGLISH        "Undetectable on enemy radar."
+
+REFERENCE           10_LESS_KILLS_FOR_STREAKS
+LANG_ENGLISH        "Killstreaks require 10 less kill."
+
+REFERENCE           DEEPER_BULLET_PENETRATION
+LANG_ENGLISH        "Deeper bullet penetration."
+
+REFERENCE           LONGER_BREATH_FOR_STEADIER
+LANG_ENGLISH        "Longer breath for steadier sniper shots."
+
+REFERENCE           INCREASED_HIPFIRE_ACCURACY
+LANG_ENGLISH        "Increased hip-fire accuracy."
+
+REFERENCE           FASTER_RELOADING
+LANG_ENGLISH        "Faster reloading."
+
+REFERENCE           HIGHER_EXPLOSIVE_WEAPON
+LANG_ENGLISH        "Higher explosive weapon damage."
+
+REFERENCE           SPRINT_FOR_LONGER_DISTANCES
+LANG_ENGLISH        "Sprint for longer distances."
+
+REFERENCE           MAKE_LESS_SOUND_WHEN
+LANG_ENGLISH        "Make less sound when you move."
+
+REFERENCE           PULL_OUT_YOUR_PISTOL
+LANG_ENGLISH        "Pull out your pistol before dying."
+
+REFERENCE           ABILITY_TO_SEEK_OUT_ENEMY
+LANG_ENGLISH        "Ability to seek out enemy explosives."
+
+REFERENCE           IMUNE_TO_GAS_LIMITED_1
+LANG_ENGLISH        "Immune zombies gas temporary."
+
+REFERENCE           SPEC_M92
+LANG_ENGLISH        "Cartridge: 9 x 19 mm Luger \n Ammo Clip/Max: 15/150 rounds \n Attachments: None"
+
+REFERENCE           SPEC_USP
+LANG_ENGLISH        "Cartridge: .45 ACP \n Ammo Clip/Max: 12/120 rounds \n Attachments: None"
+
+REFERENCE           SPEC_1911
+LANG_ENGLISH        "Cartridge: .45 ACP \n Ammo Clip/Max: 8/160 rounds \n Attachments: None"
+
+REFERENCE           SPEC_DESERTEAGLE
+LANG_ENGLISH        "Cartridge: .50 AE \n Ammo Clip/Max: 7/140 rounds \n Attachments: None"
+
+REFERENCE           SPEC_DESERTEAGLE_TAC
+LANG_ENGLISH        "Cartridge: .50 AE \n Ammo Clip/Max: 9/180 rounds \n Elite Pistol - Achieved for buying all pistols"
+
+REFERENCE           SPEC_GLOCK18
+LANG_ENGLISH        "Cartridge: 9 x 19 mm Parabellum \n Ammo Clip/Max: 19/228 rounds \n Attachments: None"
+
+REFERENCE           SPEC_M93
+LANG_ENGLISH        "Cartridge: 9 x 19 mm Luger \n Ammo Clip/Max: 15/150 rounds \n Attachments: None"
+
+REFERENCE           SPEC_MP5K
+LANG_ENGLISH        "Cartridge: 9 x 19 mm Luger \n Ammo Clip/Max: 20/240 rounds \n Attachments: None"
+
+REFERENCE           SPEC_MP5KSD
+LANG_ENGLISH        "Cartridge: 9 x 19 mm Luger \n Ammo Clip/Max: 30/360 rounds \n Elite Machine Pistol - Achieved for buying all machine pistols"
+
+REFERENCE           SPEC_MP5
+LANG_ENGLISH        "Cartridge: 9 x 19 mm Luger \n Clip/Max: 30/360 rounds \n Attachments: Reflex"
+
+REFERENCE           SPEC_UMP
+LANG_ENGLISH        "Cartridge: .45 ACP \n Clip/Max: 30/360 rounds \n Attachments: Reflex"
+
+REFERENCE           SPEC_SKORPION
+LANG_ENGLISH        "Cartridge: .32 ACP \n Ammo Clip/Max: 20/320 rounds \n Attachments: Reflex"
+
+REFERENCE           SPEC_UZI
+LANG_ENGLISH        "Cartridge: 9 x 19 mm Luger \n Ammo Clip/Max: 32/384 rounds \n Attachments: Reflex"
+
+REFERENCE           SPEC_AK74U
+LANG_ENGLISH        "Cartridge: 7.62 x 39 mm \n Clip/Max: 30/420 rounds \n Attachments: Reflex"
+
+REFERENCE           SPEC_VECTOR
+LANG_ENGLISH        "Cartridge: .45 ACP \n Clip/Max: 30/360 rounds \n Attachments: Reflex"
+
+REFERENCE           SPEC_P90
+LANG_ENGLISH        "Cartridge: 5.7 × 28 mm \n Clip/Max: 50/600 rounds \n Attachments: Reflex"
+
+REFERENCE           SPEC_M4CQBR
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO \n Clip/Max: 100/800 rounds \n Elite SMG - Achieved for buying all SMGs"
+
+REFERENCE           PERKS_PUMP_ACTION_SHOTGUN_EFFECTIVE
+LANG_ENGLISH        "Cartridge: 12 Gauge \n Ammo Clip/Max: 7/70 rounds \n Attachments: Grip"
+
+REFERENCE           SEMIAUTOMATIC_COMBAT
+LANG_ENGLISH        "Cartridge: 12 Gauge \n Ammo Clip/Max: 6/60 rounds \n Attachments: Grip"
+
+REFERENCE           SPEC_KS23
+LANG_ENGLISH        "Cartridge: 12 Gauge \n Ammo Clip/Max: 7/70 rounds \n Attachments: Dragon Breath"
+
+REFERENCE           SPEC_AA12
+LANG_ENGLISH        "Cartridge: 12 Gauge \n Ammo Clip/Max: 8(20)/80(120) rounds \n Attachments: Drum Magazine"
+
+REFERENCE           SPEC_SAIGA12
+LANG_ENGLISH        "Cartridge: 12 Gauge \n Ammo Clip/Max: 10/100 rounds \n Elite Shotgun - Achieved for buying all shotguns"
+
+REFERENCE           FULLY_AUTOMATIC_WITH9
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO (belt) \n Ammo Clip/Max: 100/600 rounds \n Attachments: Reflex Sight, Grip"
+
+REFERENCE           FULLY_AUTOMATIC_WITH10
+LANG_ENGLISH        "Cartridge: 7.62 x 39 mm (belt) \n Ammo Clip/Max: 100/600 rounds \n Attachments: Reflex Sight, Grip"
+
+REFERENCE           FULLY_AUTOMATIC_WITH11
+LANG_ENGLISH        "Cartridge: 7.62 x 51 mm NATO (belt) \n Ammo Clip/Max: 200/1200 rounds \n Attachments: Reflex Sight, Grip"
+
+REFERENCE           SPEC_STONER
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO \n Ammo Clip/Max: 45/630 rounds \n Elite LMG - Achieved for buying all LMGs"
+
+REFERENCE           BOLTACTION_SNIPER_RIFLE
+LANG_ENGLISH        "Cartridge: 7.62 x 51 mm NATO \n Clip/Max: 5/50 rounds \n Attachments: ACOG Sight"
+
+REFERENCE           SEMIAUTOMATIC_SNIPER2
+LANG_ENGLISH        "Cartridge: 7.62 x 51 mm NATO \n Clip/Max: 10/100 rounds \n Attachments: ACOG Sight"
+
+REFERENCE           SEMIAUTOMATIC_SNIPER
+LANG_ENGLISH        "Cartridge: 7.62 x 54 mm R \n Clip/Max: 10/100 rounds \n Attachments: ACOG Sight"
+
+REFERENCE           BOLTACTION_SNIPER_RIFLE1
+LANG_ENGLISH        "Cartridge: 7.62 x 51 mm NATO \n Clip/Max: 4/40 rounds \n Attachments: ACOG Sight"
+
+REFERENCE           SEMIAUTOMATIC_SNIPER1
+LANG_ENGLISH        "Cartridge: .50 BMG (12.7 x 99 mm) \n Clip/Max: 10/100 rounds \n Attachments: ACOG Sight"
+
+REFERENCE           SPEC_TAC50
+LANG_ENGLISH        "Cartridge: .50 BMG (12.7 x 99 mm) \n Clip/Max: 5/60 rounds \n Elite Sniper - Achieved for buying all sniper rifles"
+
+REFERENCE           SPEC_TRG42
+LANG_ENGLISH        "Cartridge: .338 Lapua Magnum \n Clip/Max: 7/70 rounds \n Attachments: Suppressor"
+
+REFERENCE           SPEC_M16
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO \n Clip/Max: 30/420 rounds \n Attachments: Reflex Sight"
+
+REFERENCE           SPEC_AUG
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO \n Clip/Max: 30/420 rounds \n Attachments: Reflex Sight, Silencer"
+
+REFERENCE           SPEC_AK47
+LANG_ENGLISH        "Cartridge: 7.62 x 39 mm \n\tClip/Max: 30/420 rounds \n Attachments: Reflex Sight, Silencer"
+
+REFERENCE           SPEC_SCAR
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO \n Clip/Max: 30/420 rounds \n Attachments: Reflex Sight, Silencer"
+
+REFERENCE           SPEC_M4_CARBINE
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO \n Clip/Max: 30/420 rounds \n Attachments: Reflex Sight, Silencer"
+
+REFERENCE           SPEC_FAMAS
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO \n Clip/Max: 30/420 rounds \n Attachments: Reflex Sight, Silencer"
+
+REFERENCE           SPEC_G3
+LANG_ENGLISH        "Cartridge: 7.62 x 51 mm NATO \n Clip/Max: 20/280 rounds \n Attachments: Reflex Sight, Silencer"
+
+REFERENCE           SPEC_FAD
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO \n Clip/Max: 45/630 rounds \n Attachments: Reflex Sight, Silencer"
+
+REFERENCE           SPEC_G36C
+LANG_ENGLISH        "Cartridge: 5.56 x 45 mm NATO \n Clip/Max: 30/420 rounds \n Attachments: Reflex Sight, Silencer"
+
+REFERENCE           SPEC_ACR
+LANG_ENGLISH        "Cartridge: 7.62 x 51 mm NATO \n Clip/Max: 30/420 rounds \n Attachments: Reflex Sight, Silencer"
+
+REFERENCE           SPEC_M14
+LANG_ENGLISH        "Cartridge: 7.62 x 51 mm NATO \n Clip/Max: 20/280 rounds \n Attachments: Reflex Sight"
+
+REFERENCE           SPEC_TYPE95
+LANG_ENGLISH        "Cartridge: 7.62 x 39 mm \n Clip/Max: 30/420 rounds \n Elite Assault Rifle - Achieved for buying all assault rifles"
+
+REFERENCE           COST_1000
+LANG_ENGLISH        "This item costs $1000"
+
+REFERENCE           COST_1500
+LANG_ENGLISH        "This item costs $1500"
+
+REFERENCE           COST_2000
+LANG_ENGLISH        "This item costs $2000"
+
+REFERENCE           COST_3000
+LANG_ENGLISH        "This item costs $3000"
+
+REFERENCE           COST_3500
+LANG_ENGLISH        "This item costs $3500"
+
+REFERENCE           COST_4000
+LANG_ENGLISH        "This item costs $4000"
+
+REFERENCE           COST_5000
+LANG_ENGLISH        "This item costs $5000"
+
+REFERENCE           COST_7000
+LANG_ENGLISH        "This item costs $7000"
+
+REFERENCE           COST_7500
+LANG_ENGLISH        "This item costs $7500"
+
+REFERENCE           COST_8000
+LANG_ENGLISH        "This item costs $8000"
+
+REFERENCE           COST_8500
+LANG_ENGLISH        "This item costs $8500"
+
+REFERENCE           COST_9000
+LANG_ENGLISH        "This item costs $9000"
+
+REFERENCE           COST_10000
+LANG_ENGLISH        "This item costs $10000"
+
+REFERENCE           COST_100000
+LANG_ENGLISH        "This item costs $100000"
+
+REFERENCE           KILLSTREAK_SENTRY
+LANG_ENGLISH        "Mini-gun mounted sentry."
+
+REFERENCE           KILLSTREAK_MK19
+LANG_ENGLISH        "Grenade launcher mounted sentry."
+
+REFERENCE           ARMOR_RANK1
+LANG_ENGLISH        "Very Light Body Armor"
+
+REFERENCE           ARMOR_RANK2
+LANG_ENGLISH        "Light Body Armor"
+
+REFERENCE           ARMOR_RANK3
+LANG_ENGLISH        "Medium Body Armor"
+
+REFERENCE           ARMOR_RANK4
+LANG_ENGLISH        "Heavy Body Armor"
+
+REFERENCE           ARMOR_RANK5
+LANG_ENGLISH        "Extreme Body Armor"
+
+REFERENCE           ARMOR_RANK6
+LANG_ENGLISH        "Juggernaut Suit"
+
+REFERENCE           MEDKIT_RANK1
+LANG_ENGLISH        "XS Medikit"
+
+REFERENCE           MEDKIT_RANK2
+LANG_ENGLISH        "S Medikit"
+
+REFERENCE           MEDKIT_RANK3
+LANG_ENGLISH        "M Medikit"
+
+REFERENCE           MEDKIT_RANK4
+LANG_ENGLISH        "L Medikit"
+
+REFERENCE           MEDKIT_RANK5
+LANG_ENGLISH        "XL Medikit"
+
+REFERENCE           MEDKIT_RANK6
+LANG_ENGLISH        "XXL Medikit"
+
+REFERENCE           UNLOCKED_AT_LV2
+LANG_ENGLISH        "Unlocked at Zombie Rookie I / Level 2"
+
+REFERENCE           UNLOCKED_AT_LV4
+LANG_ENGLISH        "Unlocked at Zombie Rookie III \n Level 4"
+
+REFERENCE           UNLOCKED_AT_LV5
+LANG_ENGLISH        "Unlocked at Stupid Hunter \n Level 5"
+
+REFERENCE           UNLOCKED_AT_LV6
+LANG_ENGLISH        "Unlocked at Stupid Hunter I \n Level 6"
+
+REFERENCE           UNLOCKED_AT_LV7
+LANG_ENGLISH        "Unlocked at Stupid Hunter II \n Level 7"
+
+REFERENCE           UNLOCKED_AT_LV8
+LANG_ENGLISH        "Unlocked at Stupid Hunter III \n Level 8"
+
+REFERENCE           UNLOCKED_AT_LV9
+LANG_ENGLISH        "Unlocked at Beginner of Zombiekiller \n Level 9"
+
+REFERENCE           UNLOCKED_AT_LV12
+LANG_ENGLISH        "Unlocked at Beginner of Zombiekiller III \n Level 12"
+
+REFERENCE           UNLOCKED_AT_LV13
+LANG_ENGLISH        "Unlocked at Zombie Lover / Level 13"
+
+REFERENCE           UNLOCKED_AT_LV14
+LANG_ENGLISH        "Unlocked at Zombie Lover I\n Level 14"
+
+REFERENCE           UNLOCKED_AT_LV17
+LANG_ENGLISH        "Unlocked at Beginner of Surviver / Level 17"
+
+REFERENCE           UNLOCKED_AT_LV18
+LANG_ENGLISH        "Unlocked at Beginner of Surviver I \n Level 18"
+
+REFERENCE           UNLOCKED_AT_LV19
+LANG_ENGLISH        "Unlocked at Beginner of Surviver II \n Level 19"
+
+REFERENCE           UNLOCKED_AT_LV20
+LANG_ENGLISH        "Unlocked at Beginner of Surviver III \n Level 20"
+
+REFERENCE           UNLOCKED_AT_LV22
+LANG_ENGLISH        "Unlocked at Survivor of Zombies I \n Level 22"
+
+REFERENCE           UNLOCKED_AT_LV23
+LANG_ENGLISH        "Unlocked at Survivor of Zombies II \n Level 23"
+
+REFERENCE           UNLOCKED_AT_LV24
+LANG_ENGLISH        "Unlocked at Survivor of Zombies III \n Level 24"
+
+REFERENCE           UNLOCKED_AT_LV25
+LANG_ENGLISH        "Unlocked at Zombie Guy \n Level 25"
+
+REFERENCE           UNLOCKED_AT_LV26
+LANG_ENGLISH        "Unlocked at Zombie Guy I \n Level 26"
+
+REFERENCE           UNLOCKED_AT_LV27
+LANG_ENGLISH        "Unlocked at Zombie Guy II \n Level 27"
+
+REFERENCE           UNLOCKED_AT_LV28
+LANG_ENGLISH        "Unlocked at Zombie Guy III \n Level 28"
+
+REFERENCE           UNLOCKED_AT_LV29
+LANG_ENGLISH        "Unlocked at Zombie Butcher \n Level 29"
+
+REFERENCE           UNLOCKED_AT_LV30
+LANG_ENGLISH        "Unlocked at Zombie Butcher I \n Level 30"
+
+REFERENCE           UNLOCKED_AT_LV31
+LANG_ENGLISH        "Unlocked at Zombie Butcher II \n Level 31"
+
+REFERENCE           UNLOCKED_AT_LV32
+LANG_ENGLISH        "Unlocked at Zombie Butcher III \n Level 32"
+
+REFERENCE           UNLOCKED_AT_LV33
+LANG_ENGLISH        "Unlocked at Crazy Survivor Guy \n Level 33"
+
+REFERENCE           UNLOCKED_AT_LV35
+LANG_ENGLISH        "Unlocked at Crazy Survivor Guy II \n Level 35"
+
+REFERENCE           UNLOCKED_AT_LV36
+LANG_ENGLISH        "Unlocked at Crazy Survivor Guy III \n Level 36"
+
+REFERENCE           UNLOCKED_AT_LV37
+LANG_ENGLISH        "Unlocked at Crazy Survivor of Zombies \n Level 37"
+
+REFERENCE           UNLOCKED_AT_LV39
+LANG_ENGLISH        "Unlocked at Crazy Survivor of Zombies II \n Level 39"
+
+REFERENCE           UNLOCKED_AT_LV40
+LANG_ENGLISH        "Unlocked at Crazy Survivor of Zombies III / Level 40"
+
+REFERENCE           UNLOCKED_AT_LV41
+LANG_ENGLISH        "Unlocked at Zombie Junkie \n Level 41"
+
+REFERENCE           UNLOCKED_AT_LV42
+LANG_ENGLISH        "Unlocked at Zombie Junkie I \n Level 42"
+
+REFERENCE           UNLOCKED_AT_LV43
+LANG_ENGLISH        "Unlocked at Zombie Junkie II \n Level 43"
+
+REFERENCE           UNLOCKED_AT_LV44
+LANG_ENGLISH        "Unlocked at Zombie Junkie \n Level 44"
+
+REFERENCE           UNLOCKED_AT_LV46
+LANG_ENGLISH        "Unlocked at Unskilled Zombie Hunter I \n Level 46"
+
+REFERENCE           UNLOCKED_AT_LV47
+LANG_ENGLISH        "Unlocked at Unskilled Zombie Hunter II \n Level 47"
+
+REFERENCE           UNLOCKED_AT_LV48
+LANG_ENGLISH        "Unlocked at Unskilled Zombie Hunter III \n Level 48"
+
+REFERENCE           UNLOCKED_AT_LV49
+LANG_ENGLISH        "Unlocked at Trained Zombie Hunter \n Level 49"
+
+REFERENCE           UNLOCKED_AT_LV50
+LANG_ENGLISH        "Unlocked at Trained Zombie Hunter I \n Level 50"
+
+REFERENCE           UNLOCKED_AT_LV51
+LANG_ENGLISH        "Unlocked at Trained Zombie Hunter II \n Level 51"
+
+REFERENCE           UNLOCKED_AT_LV53
+LANG_ENGLISH        "Unlocked at Crazy Hunter \n Level 53"
+
+REFERENCE           UNLOCKED_AT_LV54
+LANG_ENGLISH        "Unlocked at Crazy Hunter I \n Level 54"
+
+REFERENCE           UNLOCKED_AT_LV55
+LANG_ENGLISH        "Unlocked at Crazy Hunter II \n Level 55"
+
+REFERENCE           UNLOCKED_AT_LV56
+LANG_ENGLISH        "Unlocked at Crazy Hunter III \n Level 56"
+
+REFERENCE           UNLOCKED_AT_LV57
+LANG_ENGLISH        "Unlocked at Horny Zombie Hunter \n Level 57"
+
+REFERENCE           UNLOCKED_AT_LV58
+LANG_ENGLISH        "Unlocked at Horny Zombie Hunter I \n Level 58"
+
+REFERENCE           UNLOCKED_AT_LV61
+LANG_ENGLISH        "Unlocked at Zombie Survivor \n Level 61"
+
+REFERENCE           UNLOCKED_AT_LV62
+LANG_ENGLISH        "Unlocked at Zombie Survivor I \n Level 62"
+
+REFERENCE           UNLOCKED_AT_LV63
+LANG_ENGLISH        "Unlocked at Zombie Survivor II \n Level 63"
+
+REFERENCE           UNLOCKED_AT_LV64
+LANG_ENGLISH        "Unlocked at Zombie Survivor III \n Level 64"
+
+REFERENCE           UNLOCKED_AT_LV65
+LANG_ENGLISH        "Unlocked at Brain Hunter \n Level 65"
+
+REFERENCE           UNLOCKED_AT_LV66
+LANG_ENGLISH        "Unlocked at Brain Hunter I \n Level 66"
+
+REFERENCE           UNLOCKED_AT_LV67
+LANG_ENGLISH        "Unlocked at Brain Hunter II \n Level 67"
+
+REFERENCE           UNLOCKED_AT_LV69
+LANG_ENGLISH        "Unlocked at Brain Slimer \n Level 69"
+
+REFERENCE           UNLOCKED_AT_LV71
+LANG_ENGLISH        "Unlocked at Brain Slimer II \n Level 71"
+
+REFERENCE           UNLOCKED_AT_LV72
+LANG_ENGLISH        "Unlocked at Brain Slimer III \n Level 72"
+
+REFERENCE           UNLOCKED_AT_LV73
+LANG_ENGLISH        "Unlocked at Crazy Crazy \n Level 73"
+
+REFERENCE           UNLOCKED_AT_LV74
+LANG_ENGLISH        "Unlocked at Crazy Crazy I \n Level 74"
+
+REFERENCE           UNLOCKED_AT_LV75
+LANG_ENGLISH        "Unlocked at Crazy Crazy II \n Level 75"
+
+REFERENCE           UNLOCKED_AT_LV76
+LANG_ENGLISH        "Unlocked at Crazy Crazy III \n Level 76"
+
+REFERENCE           UNLOCKED_AT_LV78
+LANG_ENGLISH        "Unlocked at Brain Eater I \n Level 78"
+
+REFERENCE           UNLOCKED_AT_LV79
+LANG_ENGLISH        "Unlocked at Brain Eater II \n Level 79"
+
+REFERENCE           UNLOCKED_AT_LV81
+LANG_ENGLISH        "Unlocked at Head Breaker \n Level 81"
+
+REFERENCE           UNLOCKED_AT_LV82
+LANG_ENGLISH        "Unlocked at Head Breaker I \n Level 82"
+
+REFERENCE           UNLOCKED_AT_LV83
+LANG_ENGLISH        "Unlocked at Head Breaker II \n Level 83"
+
+REFERENCE           UNLOCKED_AT_LV100
+LANG_ENGLISH        "Unlocked at Legless Hunter / Level 100"
+
+REFERENCE           PRESS_USE_TO_REVIVE_N
+LANG_ENGLISH        "Press [USE] to revive &&1."
+
+REFERENCE           TIME_TILL_DEATH
+LANG_ENGLISH        "Time till death: &&1"
+
+REFERENCE           STICKY_ANTIPERSONNEL
+LANG_ENGLISH        "Semtex is more powerful than a Frag Grenade: larger explosive radius and higher explosive damage"
+
+ENDMARKER

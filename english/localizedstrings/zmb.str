@@ -1,0 +1,291 @@
+
+VERSION             "1"
+CONFIG              "C:\trees\cod3\cod3\bin\StringEd.cfg"
+FILENOTES           "Extracted from fastfile."
+
+REFERENCE           PRESS_USE_TO_REBUILD
+LANG_ENGLISH        "Hold ^3[USE]^7 to rebuild barricade"
+
+REFERENCE           KILLED_ZOM
+LANG_ENGLISH        "&&1 [killed] &&2"
+
+REFERENCE           KILLED_ZOM_WITH_A
+LANG_ENGLISH        "&&1 [&&3] &&2"
+
+REFERENCE           TYPE_DOG
+LANG_ENGLISH        "^1DOG^7"
+
+REFERENCE           TYPE_TANK
+LANG_ENGLISH        "^1TANK^7"
+
+REFERENCE           TYPE_RUNNER
+LANG_ENGLISH        "^1RUNNER^7"
+
+REFERENCE           TYPE_TABUN
+LANG_ENGLISH        "^1TABUN^7"
+
+REFERENCE           TYPE_EXPLOSIVE
+LANG_ENGLISH        "^1EXPLOSIVE^7"
+
+REFERENCE           TYPE_BULLETPROOf
+LANG_ENGLISH        "^1BULLETPROOF^7"
+
+REFERENCE           TYPE_SLIME
+LANG_ENGLISH        "^1SLIME^7"
+
+REFERENCE           TYPE_EDOG
+LANG_ENGLISH        "^1explosive DOG^7"
+
+REFERENCE           TYPE_ETANK
+LANG_ENGLISH        "^1explosive TANK^7"
+
+REFERENCE           TYPE_ERUNNER
+LANG_ENGLISH        "^1explosive RUNNER^7"
+
+REFERENCE           TYPE_BRUNNER
+LANG_ENGLISH        "^1bulletproof RUNNER^7"
+
+REFERENCE           TYPE_TTANK
+LANG_ENGLISH        "^1poisonus TANK^7"
+
+REFERENCE           TYPE_TDOG
+LANG_ENGLISH        "^1poisonus DOG^7"
+
+REFERENCE           N_DIED
+LANG_ENGLISH        "&&1 ^1is dead."
+
+REFERENCE           READY_UP
+LANG_ENGLISH        "Ready up, it's about to begin.\nTime till wave starts: &&1"
+
+REFERENCE           THEY_WILL_BE_BACK
+LANG_ENGLISH        "Prepare yourself! They will be back...\nTime till wave starts: &&1"
+
+REFERENCE           TIME_TILL_START
+LANG_ENGLISH        "Time till wave starts: &&1"
+
+REFERENCE           PLUS_MONEY
+LANG_ENGLISH        "+&&1$"
+
+REFERENCE           MINUS_MONEY
+LANG_ENGLISH        "-&&1$"
+
+REFERENCE           MINUS
+LANG_ENGLISH        "-&&1"
+
+REFERENCE           HEALTH
+LANG_ENGLISH        "Health:"
+
+REFERENCE           NOT_ENOUGH_POINTS
+LANG_ENGLISH        "You don't got enough points to buy this!"
+
+REFERENCE           NOT_ENOUGH_POINTS_N
+LANG_ENGLISH        "You need at least &&1 points for this!"
+
+REFERENCE           YOU_BOUGHT_PERK1_N
+LANG_ENGLISH        "Your Perk 1 is now ^4&&1^7."
+
+REFERENCE           YOU_BOUGHT_PERK2_N
+LANG_ENGLISH        "Your Perk 2 is now ^1&&1^7."
+
+REFERENCE           YOU_BOUGHT_PERK3_N
+LANG_ENGLISH        "Your Perk 3 is now ^2&&1^7."
+
+REFERENCE           NOW_PLAYING_N
+LANG_ENGLISH        "Now playing &&1."
+
+REFERENCE           CLOAK_ACTIVE
+LANG_ENGLISH        "^2You're now cloaked."
+
+REFERENCE           CLOAK_INACTIVE
+LANG_ENGLISH        "^1You're now uncloaked."
+
+REFERENCE           ABILITY_ON_COOLDOWN
+LANG_ENGLISH        "^1This ability is on cooldown."
+
+REFERENCE           ABILITY_N_READY
+LANG_ENGLISH        "^2The ability &&1 is ready again."
+
+REFERENCE           ARMORY_BACK
+LANG_ENGLISH        "Back ^2ESC^7"
+
+REFERENCE           ARMORY_SELECTCATEGORY
+LANG_ENGLISH        "Select a category or an item."
+
+REFERENCE           WEAPON_ARMORY
+LANG_ENGLISH        "WEAPON ARMORY"
+
+REFERENCE           EQUIPMENT_ARMORY
+LANG_ENGLISH        "EQUIPMENT ARMORY"
+
+REFERENCE           ARMORY_CAN_CARRY_ONLY_TWO
+LANG_ENGLISH        "Only two bullet weapons can be carried. Buying a new weapon will replace your current one."
+
+REFERENCE           ARMORY_AMMO_REFILL
+LANG_ENGLISH        "REFILL BULLET AMMO"
+
+REFERENCE           ARMORY_HANDGUNS
+LANG_ENGLISH        "HANDGUNS"
+
+REFERENCE           ARMORY_MPS
+LANG_ENGLISH        "MACHINE PISTOLS"
+
+REFERENCE           ARMORY_SMGS
+LANG_ENGLISH        "SUB MACHINE GUNS"
+
+REFERENCE           ARMORY_ARS
+LANG_ENGLISH        "ASSAULT RIFLES"
+
+REFERENCE           ARMORY_ARS2
+LANG_ENGLISH        "ASSAULT RIFLES II"
+
+REFERENCE           ARMORY_LMGS
+LANG_ENGLISH        "LIGHT MACHINE GUNS"
+
+REFERENCE           ARMORY_SNIPERS
+LANG_ENGLISH        "SNIPER RIFLES"
+
+REFERENCE           ARMORY_SHOTGUNS
+LANG_ENGLISH        "SHOTGUNS"
+
+REFERENCE           ARMORY_SPECIAL
+LANG_ENGLISH        "SPECIAL WEAPONS"
+
+REFERENCE           YOU_ALREADY_OWN_ONE
+LANG_ENGLISH        "You already own one of those."
+
+REFERENCE           ARMORY_GRENADE
+LANG_ENGLISH        "LETHAL GRENADES"
+
+REFERENCE           ARMORY_SGRENADES
+LANG_ENGLISH        "SPECIAL GRENADES"
+
+REFERENCE           ARMORY_PERKS
+LANG_ENGLISH        "PERKS"
+
+REFERENCE           ARMORY_C4
+LANG_ENGLISH        "C4 X5 (10 MAX)"
+
+REFERENCE           ARMORY_CLAYMORES
+LANG_ENGLISH        "CLAYMORE X5 (10 MAX)"
+
+REFERENCE           ARMORY_EX41
+LANG_ENGLISH        "EX-41 X4 (12 MAX)"
+
+REFERENCE           ARMORY_RPG
+LANG_ENGLISH        "RPG-7 X2 (6 MAX)"
+
+REFERENCE           ARMORY_SENTRY
+LANG_ENGLISH        "SENTRY GATLING GUN"
+
+REFERENCE           ARMORY_MK19
+LANG_ENGLISH        "SENTRY MK-19 LAUNCHER"
+
+REFERENCE           ATTACHMENT_NOT_AVAILABLE_FOR_WEAPON
+LANG_ENGLISH        "This weapon - attachment combination is not available."
+
+REFERENCE           NEW_WAVE_INCOMING
+LANG_ENGLISH        "New wave of zombies incoming."
+
+REFERENCE           NEW_N_WAVE_INCOMING
+LANG_ENGLISH        "New wave of &&1's incoming."
+
+REFERENCE           ARENA_WAVE_N_OVER
+LANG_ENGLISH        "Wave &&1 is over."
+
+REFERENCE           ARENA_N_ZOMBIES_KILLED
+LANG_ENGLISH        "The survivors killed &&1 zombies."
+
+REFERENCE           ARENA_TIME_FOR_WEAPON
+LANG_ENGLISH        "Time for a new weapon."
+
+REFERENCE           TARGET_REACHED
+LANG_ENGLISH        "That's it...we made it"
+
+REFERENCE           SURVIVORS_DEAD
+LANG_ENGLISH        "They got us all"
+
+REFERENCE           WE_ARE_SAVE
+LANG_ENGLISH        "We're safe...for now"
+
+REFERENCE           AIRSTRIKE
+LANG_ENGLISH        "Airstrike"
+
+REFERENCE           HELICOPTER
+LANG_ENGLISH        "Cobra Helicopter"
+
+REFERENCE           BLACKHAWK
+LANG_ENGLISH        "Blackhawk Door-Gunner"
+
+REFERENCE           ARTILLERY
+LANG_ENGLISH        "Artillery strike"
+
+REFERENCE           AC130_STRIKE
+LANG_ENGLISH        "AC-130 Strike"
+
+REFERENCE           AC130_GUNNER
+LANG_ENGLISH        "AC-130 Gunner"
+
+REFERENCE           RCBOMB
+LANG_ENGLISH        "RC-XD Bomb"
+
+REFERENCE           LASER_TURRET
+LANG_ENGLISH        "Laser Turret"
+
+REFERENCE           ALREADY_N_OF_N_TURRETS
+LANG_ENGLISH        "You already got &&1 of &&2 turrets."
+
+REFERENCE           SENTRYGUN_PLACE_HINT
+LANG_ENGLISH        "Press ^3[{+attack}]^7 to place turret, hold ^3[{+toggleads_throw}]^7 to cancel."
+
+REFERENCE           SENTRYGUN_NO_SPACE_HINT
+LANG_ENGLISH        "Can't place turret here."
+
+REFERENCE           SENTRYGUN_PICKUP_HINT
+LANG_ENGLISH        "Press ^3[{+activate}]^7 to pick up turret."
+
+REFERENCE           CAREPACKAGE
+LANG_ENGLISH        "Carepackage"
+
+REFERENCE           AIRDROP
+LANG_ENGLISH        "Emergency Airdrop"
+
+REFERENCE           PRESS_USE_TO_GAIN
+LANG_ENGLISH        "Hold ^3[{+activate}]^7 to gain a &&1."
+
+REFERENCE           PRESS_USE_TO_GAIN_A
+LANG_ENGLISH        "Hold ^3[{+activate}]^7 to get an ammo refill."
+
+REFERENCE           PRESS_USE_TO_GAIN_W
+LANG_ENGLISH        "Hold ^3[{+activate}]^7 to exchange your weapon with a &&1."
+
+REFERENCE           CAPTURED_CAREPACKAGE
+LANG_ENGLISH        "Care Package captured!"
+
+REFERENCE           TEMP_WEAPON_GAINED
+LANG_ENGLISH        "Special weapon gained!"
+
+REFERENCE           AMMO_REFILLED
+LANG_ENGLISH        "Weapon ammo refilled!"
+
+REFERENCE           RCXD
+LANG_ENGLISH        "RCXD Bomb"
+
+REFERENCE           Nuke
+LANG_ENGLISH        "Nuke"
+
+REFERENCE           THAT_WILL_HOLD_THEM_BACK
+LANG_ENGLISH        "That will hold them back..."
+
+REFERENCE           MAPVOTE_TITLE
+LANG_ENGLISH        "Select map and gametype!"
+
+REFERENCE           MAPVOTE_HINT
+LANG_ENGLISH        "Press ^3Fire^7 to vote."
+
+REFERENCE           MAPVOTE_TIME
+LANG_ENGLISH        "Time left: &&1"
+
+REFERENCE           THE_WINNER_IS
+LANG_ENGLISH        "The next map is:"
+
+ENDMARKER
