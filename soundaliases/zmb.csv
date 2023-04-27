@@ -1,0 +1,20 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage,center percentage,platform,envelop_min,envelop_max,envelop percentage
+
+# ZMB,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+# Zombies sound
+#zom_attack_0,4,zmb/zombies/attack0.wav,0.95,1,max,1.1,1.2,450,3500,auto,,,,,all_mp,,,,,700,,nowetlevel fulldrylevel,0.9,,,100,1000,0.65
+zom_attack_0,,zmb/zombies/attack0.wav,0.95,1,na,,,450,3500,auto,,,,,all_mp,,,,,700,,nowetlevel fulldrylevel,0.9,,,100,1000,0.65
+
+# Wave
+#DA_newWave_normal,,zmb/ann/ann_wave_start.wav,1,,music,,,,,auto2d,streamed,,,master,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_newWave_normal,,zmb/ann/ann_wave_start.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_newWave_special,,zmb/ann/ann_dog_start.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_bonfire_sale,,zmb/ann/bonfire_sale.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_death_machine,,zmb/ann/death_machine.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_firesale_end,,zmb/ann/ann_special_magicbox_full.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_firesale_start,,zmb/ann/firesale_short.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_powerup_carpenter,,zmb/ann/ann_carpenter.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_powerup_doublepoints,,zmb/ann/ann_doublepoints.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_powerup_instakill,,zmb/ann/ann_instakill.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_powerup_maxammo,,zmb/ann/ann_maxammo.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+DA_powerup_nuke,,zmb/ann/ann_nuke.wav,0.7,0.9,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,

@@ -1,0 +1,41 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage,center percentage,platform,envelop_min,envelop_max,envelop percentage
+
+# RCXD HP
+mp_killstreak_rcxd_car,,hardpoints/rccar/veh_rc_eng_plr_l.wav,1,1,max,1,1,400,1000,auto,streamed,,looping,,all_mp,,,,,,,,1,,,200,5000,1
+mp_killstreak_rcxd_hupe,,hardpoints/rccar/rccar_hupe.wav,0.4,0.6,music,,,,,auto2d,streamed,,,master,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+mp_killstreak_rcbomb,,hardpoints/mp_killstrk_rcbomb.mp3,1,,max,,,,,auto2d,streamed,,,,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+
+# MP Vehicles,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+mp_little_helicopter,,vehicles/veh_littlebird_idle_loop_v1res.wav,1,,vehicle,1.15,,450,8000,vehicle,streamed,,rlooping,0.85,all_mp,,,,helicopter1,,,,0.5,,,750,4000,0.65
+
+# airdrop HP
+crate_hit_ground,,hardpoints/crate_land.wav,0.9,0.94,na,1,1,450,8000,auto,streamed,,,0.7,all_mp,,,,,,,,
+veh_ac130_flyby,,hardpoints/ac130/scn_arcadia_c130_shot_down_amb.wav,0.7,0.84,na,1,1,450,8000,auto,streamed,,,0.7,all_mp,,,,,,,,
+#veh_ac130_flyby,,hardpoints/ac130/veh_ac130_passby1.mp3,1,,music,,,,,auto2d,streamed,,,master,all_mp,,,,,,music,nowetlevel fulldrylevel,,,,,,
+ammo_crate_use,,hardpoints/ammo_crate_use.wav,0.6,0.8,na,,,,,auto2d,streamed,,,master,all_mp,,,,,,,nowetlevel fulldrylevel,,,,,,
+mp_killstreak_carepackage,,hardpoints/mp_killstrk_carepackage.wav,0.6,0.8,na,,,,,auto2d,streamed,,,master,all_mp,,,,,,,nowetlevel fulldrylevel,,,,,,
+
+# AC130 HP
+mp_killstreak_ac130,,hardpoints/mp_killstrk_ac130.wav,0.6,0.8,na,,,,,auto2d,streamed,,,master,all_mp,,,,,,,nowetlevel fulldrylevel,,,,,,
+mp_killstreak_artillery,,hardpoints/cannon_sequence_hvy1_filt.wav,0.6,0.8,na,,,,,auto2d,streamed,,,master,all_mp,,,,,,,nowetlevel fulldrylevel,,,,,,
+
+# Sentry HP
+sentry_activate,,hardpoints/sentry/activate.wav,1,1,max,1,1,400,1500,auto,streamed,,,,all_mp,,,,,,,,1,,,200,5000,1
+sentry_deactivate,,hardpoints/sentry/deactivate.wav,1,1,max,1,1,400,1500,auto,streamed,,,,all_mp,,,,,,,,1,,,200,5000,1
+#sentry_gatling_shoot,,hardpoints/sentry/shot_00.wav,1,1,na,,,400,1500,auto,streamed,,,,all_mp,,,,,,,,1,,,200,5000,1
+sentry_gatling_shoot,,hardpoints/sentry/shot_00.wav,0.6,0.75,wpnplyr,0.9,1,500000,,auto2d,,,,0.85,,,,,weapon2
+#                   ,,                           ,0.5,0.7,wpnplyr,0.9,1,500000,,local,,,,0.85,,,,,weapon2
+#                                                ,0.41,0.47,wpnplyr,0.95,1.05,500000,,local,,,,0.85,,,,,weapon2,,,,
+#                                                ,0.41,0.47,wpnplyr,0.95,1.05,500000,,local2,,,,0.85,,,,,weapon2,,,,
+#                                                ,0.31,0.37,wpnplyr,0.95,1.05,500000,,auto2d,,,,0.85,,,,,weapon2,,,,
+#                                                ,0.84,0.9,wpnai,1,1,35,10920,weapon,,,,0.7,all_mp,,,,weapon4,,,,
+mp_killstreak_sentry_gun,,hardpoints/mp_killstrk_sentrygun.wav,0.6,0.8,na,,,,,auto2d,streamed,,,master,all_mp,,,,,,,nowetlevel fulldrylevel,,,,,,
+
+# In raygun.csv
+#weap_raygun_exp,,weapons/raygun/wpn_ray_exp.wav,0.75,0.9,explosion,1,1.5,200,4500,effects2,,,,0.5,,,,,,,,,
+
+# Nuke HP
+mp_killstreak_nuke,,hardpoints/nuke/mp_killstrk_nuke.wav,0.6,0.8,na,,,,,auto2d,streamed,,,master,all_mp,,,,,,,nowetlevel fulldrylevel,,,,,,
+nuclear_aftmath,,hardpoints/nuke/airlift_nuclear_aftmath.wav,1,,na,,,,,auto2d,streamed,,,master,all_mp,,,,,,,nowetlevel fulldrylevel,,,,,,
+nuclear_exp,,hardpoints/nuke/airlift_nuclear_exp.wav,1,,na,,,,,auto2d,streamed,,,master,all_mp,,,,,,,nowetlevel fulldrylevel,,,,,,
+nuclear_warning,,hardpoints/nuke/nuke_warning.wav,0.4,0.6,na,,,,,auto2d,streamed,,,master,all_mp,,,,,,,nowetlevel fulldrylevel,,,,,,

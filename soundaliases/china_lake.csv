@@ -1,0 +1,15 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage,center percentage,platform,envelop_min,envelop_max,envelop percentage
+
+#China Lake
+#weap_ex41_fire_plr,,weapons/china_lake/weap_ex41_fire.wav,0.72,0.79,wpnplyr,1,1,500000,,local,,,,0.85,,,,,weapon2,,,,
+# weap_ex41_fire_npc,,weapons/china_lake/weap_ex41_fire.wav,0.84,0.9,wpnai,1.15,1.25,35,8400,weapon,,,,0.7,!ac130 all_mp,,,,weapon4
+#weap_ex41_fire_npc,,weapons/china_lake/weap_ex41_fire.wav,0.84,0.9,wpnai,1.15,1.25,35,10920,weapon,,,,0.7,all_mp,,,,weapon4
+weap_ex41_sight_up,,weapons/china_lake/weap_ex41_sight_d_u.wav,0.8,0.8,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,
+
+weap_ex41_pull,,weapons/china_lake/weap_ex41_close.wav,0.8,0.8,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,
+weap_ex41_push,,weapons/china_lake/weap_ex41_open.wav,0.8,0.8,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,
+
+#weap_ex41_clip_in,,weapons/china_lake/weap_ex41_clip_in.wav,0.55,0.6,wpnplyr,1,1,7,500,reload2d,,,,0.85,,,,,weapon2,
+#weap_ex41_push,,weapons/china_lake/weap_ex41_push.wav,0.8,0.8,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,
+#weap_ex41_close,,weapons/china_lake/weap_ex41_close.wav,0.8,0.8,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,
+#weap_ex41_open,,weapons/china_lake/weap_ex41_open.wav,0.8,0.8,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,

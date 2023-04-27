@@ -1,0 +1,9 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage,center percentage,platform,envelop_min,envelop_max,envelop percentage,conversion
+
+# mw3 Type95
+#Fire Sounds
+
+#Reloading Sounds
+weap_mw3_type95_clipout_plr,,weapons/mw3_type95/weap_type95_reload_clipout.wav,0.55,0.6,wpnplyr,1,1,7,500,reload2d,,,,0.85,,,,,weapon2,
+weap_mw3_type95_clipin_plr,,weapons/mw3_type95/weap_type95_reload_clipin.wav,0.55,0.6,wpnplyr,1,1,7,500,reload2d,,,,0.85,,,,,weapon2,
+weap_mw3_type95_reload_chamber_plr,,weapons/mw3_type95/weap_type95_reload_chamber.wav,0.55,0.6,wpnplyr,1,1,7,500,reload2d,,,,0.85,,,,,weapon2,

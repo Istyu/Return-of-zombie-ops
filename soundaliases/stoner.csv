@@ -1,0 +1,13 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage,center percentage,platform,envelop_min,envelop_max,envelop percentage,conversion
+
+# Stoner63
+#Fire Sounds
+weap_stoner63_fire_plr,,weapons/stoner/stoner_fire.wav,0.72,0.79,wpnplyr,0.8,0.9,500000,,local,,,,0.85,,,,,weapon2
+weap_stoner63_fire_npc,,weapons/stoner/stoner_fire.wav,0.76,0.82,wpnai,0.95,1.05,35,8400,weapon,,,,0.7,!ac130 all_mp,,,,weapon4
+weap_stoner63_fire_npc,,weapons/stoner/stoner_fire.wav,0.76,0.82,wpnai,0.95,1.05,35,10920,weapon,,,,0.7,all_mp,,,,weapon4
+
+#Reloading Sounds
+weap_stoner63_mag_out_plr,,weapons/stoner/fly_stoner_mag_out.wav,0.55,0.6,wpnplyr,1,1,7,500,reload2d,,,,0.85,,,,,weapon2,
+weap_stoner63_mag_in_plr,,weapons/stoner/fly_stoner_mag_in.wav,0.55,0.6,wpnplyr,1,1,7,500,reload2d,,,,0.85,,,,,weapon2,
+weap_stoner63_pull_plr,,weapons/stoner/fly_stoner_pull.wav,0.55,0.6,wpnplyr,1,1,7,500,reload2d,,,,0.85,,,,,weapon2,
+weap_stoner63_release_plr,,weapons/stoner/fly_stoner_release.wav,0.55,0.6,wpnplyr,1,1,7,500,reload2d,,,,0.85,,,,,weapon2,

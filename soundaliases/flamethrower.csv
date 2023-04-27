@@ -1,0 +1,9 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage,center percentage,platform,envelop_min,envelop_max,envelop percentage
+
+# Flamethrower
+
+# ,,weapons/flamethrower/.wav,0.8,0.8,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,
+
+weap_flamethrower_fire_start,,weapons/flamethrower/weap_flamethrower_fire_start.wav,0.8,0.9,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,
+weap_flamethrower_fire_loop,,weapons/flamethrower/weap_flamethrower_fire_loop.wav,0.8,0.9,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,
+weap_flamethrower_fire_end,,weapons/flamethrower/weap_flamethrower_fire_end.wav,0.8,0.9,wpnplyr,1,1,200,2000,auto,,,,,,,,,,,,,

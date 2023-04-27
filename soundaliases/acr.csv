@@ -1,0 +1,16 @@
+name,sequence,file,vol_min,vol_max,vol_mod,pitch_min,pitch_max,dist_min,dist_max,channel,type,probability,loop,masterslave,loadspec,subtitle,compression,secondaryaliasname,volumefalloffcurve,startdelay,speakermap,reverb,lfe percentage,center percentage,platform,envelop_min,envelop_max,envelop percentage
+
+#Player Weapons Player,,,,,,,,,,,,,,,,,,,,,,,
+weap_acr_fire_plr,,weapons/acr/acr_fire.wav,0.95,1,wpnplyr,0.98,1.02,500000,,local,,,,0.85,all_mp,,,,,,,, 0.1
+weap_acr_fire_sil_plr,,weapons/acr/acr_silenced.wav,0.95,1,wpnplyr,0.98,1.02,500000,,local,,,,0.85,all_mp,,,,,,,, 0.1
+
+weap_acr_clipout_plr,,weapons/acr/acr_clipout.wav,0.95,1,wpnplyr,0.98,1.02,500000,,local,,,,0.85,all_mp,,,,,,,, 0.1
+weap_acr_clipin_plr,,weapons/acr/acr_clipin.wav,0.95,1,wpnplyr,0.98,1.02,500000,,local,,,,0.85,all_mp,,,,,,,, 0.1
+weap_acr_boltact_plr,,weapons/acr/acr_bolt.wav,0.95,1,wpnplyr,0.98,1.02,500000,,local,,,,0.85,all_mp,,,,,,,, 0.1
+
+#Player Weapons Non-Player,,,,,,,,,,,,,,,,,,,,,,,
+weap_acr_fire_npc,,weapons/acr/acr_fire_npc.wav,0.84,0.9,wpnai,1,1,35,10920,weapon,,,,0.7,all_mp,,,,weapon4
+weap_acr_fire_sil_npc,,weapons/acr/acr_silenced_npc.wav,0.84,0.9,wpnai,1,1,35,10920,weapon,,,,0.7,all_mp,,,,weapon4
+
+
+
