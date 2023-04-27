@@ -1,0 +1,16 @@
+x,x,x,x,x,x,x
+x,0,MPUI_NONE,weapon_missing_image,attachment_none,PERKS_NO_ATTACHMENT,
+x,1,WEAPON_MODE_REFLEX,weapon_attachment_reflex,attachment_reflex,PERKS_REPLACE_THE_IRON_SIGHTS,reflex
+x,2,WEAPON_MODE_SILENCER,weapon_attachment_suppressor,attachment_suppressor,PERKS_INVISIBLE_ON_GPS_WHEN,silencer
+x,3,WEAPON_MODE_ACOG,weapon_attachment_acog,attachment_acog,PERKS_ENHANCED_ZOOM_ACOG_SCOPE,acog
+x,4,WEAPON_MODE_GRIP,weapon_attachment_grip,attachment_grip,PERKS_VERTICAL_FOREGRIP_FOR,grip
+x,5,WEAPON_MODE_RED_DOT,weapon_attachment_reddot,attachment_reddot,PERKS_REPLACE_THE_IRON_SIGHTS,reddot
+x,6,WEAPON_MODE_SHORT,weapon_attachment_short,attachment_short,PERKS_SHORTER_BARREL,short
+x,7,WEAPON_MODE_EXPLOSIVE,weapon_attachment_explosive,attachment_explosive,PERKS_EXPLOSIVE_AMMO,explosive
+0,x,MPUI_NONE,weapon_missing_image,camo_none,PERKS_STANDARD_FINISH,
+1,x,MPUI_DESERT,ui_camoskin_brock,camo_desert,PERKS_TAN_DESERT_CAMOUFLAGE,
+2,x,MPUI_WOODLAND,ui_camoskin_bshdwl,camo_woodland,PERKS_GREEN_WOODLAND_CAMOUFLAGE,
+3,x,MPUI_DIGITAL,ui_camoskin_bwmrpt,camo_urban,PERKS_BLACK_AND_WHITE_MARPAT,
+4,x,MPUI_RED_TIGER,ui_camoskin_cmdtgr,camo_tiger,PERKS_RED_TIGER_STRIPE_CAMOUFLAGE,
+5,x,MPUI_BLUE_TIGER,ui_camoskin_stagger,camo_winter,PERKS_BLUE_TIGER_STRIPE_CAMOUFLAGE,
+6,x,MPUI_GOLDEN,ui_camoskin_gold,camo_gold,PERKS_GOLD_CAMOUFLAGE,
